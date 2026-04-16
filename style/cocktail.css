@@ -12,6 +12,30 @@
     line-height: 1.6;
 }
 
+.cocktail-page .cocktail-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+    max-width: 760px;
+}
+
+.cocktail-page .cocktail-highlights a {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(194, 165, 114, 0.34);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(194, 165, 114, 0.09);
+}
+
+.cocktail-page .cocktail-highlights a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
 .cocktail-page .navbar {
     border-top: 0;
 }
@@ -47,6 +71,11 @@
     letter-spacing: 0.06em;
 }
 
+.cocktail-page .main .menu-content .title .item-subtitle {
+    max-width: 76ch;
+    margin: 0 auto;
+}
+
 .cocktail-page .main .menu-content .objects {
     margin-top: 0.4rem;
 }
@@ -63,6 +92,25 @@
 
 .cocktail-page .main .menu-content .objects .item .header-item .title-item {
     font-weight: 620;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider {
+    border: 0;
+    background: transparent;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .header-item {
+    justify-content: center;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .title-item {
+    max-width: 100%;
+    font-size: clamp(1.2rem, 3.2vw, 1.75rem) !important;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    text-align: center;
 }
 
 .cocktail-page .main .menu-content .objects .item .header-item .specific-item {
@@ -119,5 +167,13 @@
 
     .cocktail-page .main .menu-content {
         padding: 0.9rem 0.7rem;
+    }
+
+    .cocktail-page .cocktail-highlights {
+        gap: 0.42rem;
+    }
+
+    .cocktail-page .cocktail-highlights a {
+        font-size: 0.68rem;
     }
 }
