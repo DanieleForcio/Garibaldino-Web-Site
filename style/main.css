@@ -8,17 +8,6 @@
     src: url("../fonts/NEON GLOW.otf");
 }
 
-:root {
-    --text: #f6f2ea;
-    --text-muted: #b9b2a5;
-    --border: rgba(255, 255, 255, 0.12);
-    --accent: #c2a572;
-    --radius-m: 14px;
-    --radius-l: 22px;
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
-    --space-10: 4rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,11 +15,8 @@
     font-family: inherit;
 }
 
-html,
 body {
     width: 100%;
-    color: var(--text);
-    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
     background-color: transparent;
 }
 
@@ -81,12 +67,6 @@ body {
     border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.02);
     flex: none;
-}
-
-.header a.header-back img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
 }
 
 .header a:hover {
@@ -295,11 +275,6 @@ body {
     .header .garibaldino {
         height: 38px;
         margin-left: 0.7rem;
-    }
-
-    .header a.header-back img {
-        width: 18px;
-        height: 18px;
     }
 
     .navbar {
