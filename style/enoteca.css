@@ -1,0 +1,120 @@
+.enoteca-page .viewlogo .content {
+    display: grid;
+    gap: 1.1rem;
+    justify-items: center;
+}
+
+.enoteca-page .enoteca-intro {
+    max-width: 74ch;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.7vw, 1.12rem);
+    line-height: 1.6;
+}
+
+.enoteca-page .enoteca-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+}
+
+.enoteca-page .enoteca-highlights a {
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(194, 165, 114, 0.34);
+    background: rgba(194, 165, 114, 0.08);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.enoteca-page .enoteca-highlights a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.enoteca-page .main {
+    display: grid;
+    gap: 1rem;
+}
+
+.enoteca-page .section-anchor {
+    position: relative;
+    top: -120px;
+}
+
+.enoteca-page .main .menu-content {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-l);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    padding: clamp(1rem, 2.4vw, 1.6rem);
+    margin-top: 0;
+}
+
+.enoteca-page .main .menu-content .title {
+    margin-bottom: 0.35rem;
+}
+
+.enoteca-page .main .menu-content .title .item-title {
+    letter-spacing: 0.05em;
+}
+
+.enoteca-page .main .menu-content .objects {
+    margin-top: 0.4rem;
+}
+
+.enoteca-page .main .menu-content .objects .item {
+    border-radius: var(--radius-m);
+    background: rgba(8, 8, 10, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.enoteca-page .main .menu-content .objects .item .header-item {
+    align-items: center;
+}
+
+.enoteca-page .main .menu-content .objects .item .header-item .title-item {
+    font-weight: 620;
+}
+
+.enoteca-page .main .menu-content .objects .item .header-item .specific-item {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.enoteca-page .main .menu-content .objects .item .header-item .vino {
+    font-size: clamp(1rem, 2.1vw, 1.2rem);
+}
+
+.enoteca-page .featured-block {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at right top, rgba(194, 165, 114, 0.2), rgba(255, 255, 255, 0.03));
+}
+
+.enoteca-page .featured-block::after {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -35px;
+    top: -35px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .enoteca-page .section-anchor {
+        top: -95px;
+    }
+
+    .enoteca-page .main .menu-content {
+        padding: 0.9rem 0.7rem;
+    }
+
+    .enoteca-page .enoteca-highlights a {
+        font-size: 0.68rem;
+    }
+}
