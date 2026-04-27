@@ -38,23 +38,24 @@
 }
 
 .hero {
-    padding-top: clamp(1.5rem, 4vw, 2.75rem);
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+    padding-bottom: clamp(2.8rem, 7vw, 5rem);
 }
 
 .hero__grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(1.6rem, 4vw, 3.2rem);
-    align-items: start;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(1.8rem, 5vw, 4rem);
+    align-items: center;
 }
 
 .hero__content {
     display: grid;
-    gap: 1.2rem;
+    gap: 1.25rem;
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5.2vw, 3.8rem);
+    font-size: clamp(2rem, 5.1vw, 3.8rem);
     line-height: 1;
     letter-spacing: -0.01em;
     font-family: Garibaldino, Georgia, serif;
@@ -70,11 +71,11 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    padding-top: 0.2rem;
+    padding-top: 0.35rem;
 }
 
 .hero__visual {
-    min-height: 340px;
+    min-height: 420px;
     border-radius: 0;
     overflow: hidden;
     border: 0;
@@ -84,15 +85,35 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.82) contrast(1.05);
+    filter: saturate(0.8) contrast(1.06) brightness(0.84);
+}
+
+.story {
+    position: relative;
+    isolation: isolate;
+    margin-block: clamp(0.8rem, 3vw, 2rem) clamp(2.8rem, 7vw, 5.5rem);
+    padding-block: clamp(4.5rem, 12vw, 8rem);
+}
+
+.story--immersive {
+    background-image: linear-gradient(180deg, rgba(7, 8, 10, 0.78), rgba(7, 8, 10, 0.8)),
+        linear-gradient(100deg, rgba(7, 8, 10, 0.9) 0%, rgba(7, 8, 10, 0.58) 45%, rgba(7, 8, 10, 0.86) 100%),
+        url("../images/garibaldino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .story__inner {
-    width: min(820px, 92vw);
+    width: min(1120px, 92vw);
     margin-inline: auto;
     display: grid;
     gap: 1rem;
-    text-align: center;
+    text-align: left;
+}
+
+.story__inner > * {
+    max-width: 68ch;
 }
 
 .story h2,
@@ -104,26 +125,49 @@
 }
 
 .story p {
-    color: var(--text-muted);
+    color: rgba(242, 236, 227, 0.9);
+}
+
+.experiences {
+    padding-top: clamp(2.5rem, 7vw, 5rem);
+    padding-bottom: clamp(2.8rem, 7vw, 5.5rem);
 }
 
 .section-head {
     display: grid;
     gap: 0.9rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 72ch;
 }
 
 .experience-grid {
     display: grid;
-    gap: 1.1rem;
+    gap: 1.4rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
 }
 
 .experience-card {
-    padding: 0 0 1rem;
+    position: relative;
+    padding: 1.15rem 0 1.1rem;
     display: grid;
-    gap: 0.7rem;
-    border-bottom: 1px solid var(--divider);
+    gap: 0.72rem;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    top: 1.15rem;
+    right: 0;
+    width: 1px;
+    height: calc(100% - 2.3rem);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-card:last-child::before {
+    display: none;
 }
 
 .experience-card h3 {
@@ -143,14 +187,25 @@
     color: var(--accent);
 }
 
+.reservation {
+    padding-top: clamp(2.4rem, 6vw, 4.4rem);
+    padding-bottom: clamp(2.6rem, 6vw, 4.6rem);
+}
+
 .reservation__inner {
-    padding: clamp(1rem, 2.2vw, 1.8rem) 0;
+    padding: clamp(1.4rem, 3vw, 2.4rem) 0;
     display: grid;
-    gap: 1.2rem;
-    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.8rem;
+    grid-template-columns: 1.25fr 0.75fr;
     align-items: start;
     border-top: 1px solid var(--divider);
     border-bottom: 1px solid var(--divider);
+}
+
+.reservation__content {
+    display: grid;
+    gap: 0.85rem;
+    max-width: 62ch;
 }
 
 .reservation__inner p {
@@ -159,7 +214,8 @@
 
 .reservation__actions {
     display: grid;
-    gap: 0.4rem;
+    gap: 0.55rem;
+    align-content: start;
 }
 
 .footer .info a {
@@ -170,6 +226,12 @@
     color: var(--accent);
 }
 
+@media (max-width: 1100px) {
+    .experience-card::before {
+        display: none;
+    }
+}
+
 @media (max-width: 980px) {
     .hero__grid,
     .reservation__inner,
@@ -177,8 +239,21 @@
         grid-template-columns: 1fr;
     }
 
+    .hero {
+        padding-top: clamp(1.4rem, 5vw, 2.3rem);
+    }
+
     .hero__visual {
-        min-height: 270px;
+        min-height: 280px;
+    }
+
+    .story {
+        padding-block: clamp(3rem, 11vw, 4.4rem);
+        margin-block: 0.7rem 2.4rem;
+    }
+
+    .story__inner {
+        text-align: left;
     }
 
     .home-header__inner {
@@ -193,5 +268,13 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 0.45rem;
+    }
+
+    .experiences {
+        padding-top: 2rem;
+    }
+
+    .reservation__inner {
+        gap: 1.2rem;
     }
 }
