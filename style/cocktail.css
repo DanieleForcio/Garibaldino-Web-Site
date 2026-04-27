@@ -1,0 +1,176 @@
+.cocktail-page .viewlogo .content {
+    display: grid;
+    gap: 1.1rem;
+    justify-items: center;
+}
+
+.cocktail-page .cocktail-intro {
+    max-width: 70ch;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.7vw, 1.14rem);
+    line-height: 1.6;
+}
+
+.cocktail-page .cocktail-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+    max-width: 760px;
+}
+
+.cocktail-page .cocktail-highlights a {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(194, 165, 114, 0.34);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(194, 165, 114, 0.09);
+}
+
+.cocktail-page .cocktail-highlights a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.cocktail-page .navbar {
+    border-top: 0;
+}
+
+.cocktail-page .navbar .nav {
+    width: min(1160px, 96vw);
+    gap: 0.55rem;
+}
+
+.cocktail-page .main {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.cocktail-page .section-anchor {
+    position: relative;
+    top: -120px;
+}
+
+.cocktail-page .main .menu-content {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-l);
+    background: rgba(255, 255, 255, 0.01);
+    padding: clamp(1rem, 2.4vw, 1.6rem);
+    margin-top: 0;
+}
+
+.cocktail-page .main .menu-content .title {
+    margin-bottom: 0.35rem;
+}
+
+.cocktail-page .main .menu-content .title .item-title {
+    letter-spacing: 0.06em;
+}
+
+.cocktail-page .main .menu-content .title .item-subtitle {
+    max-width: 76ch;
+    margin: 0 auto;
+}
+
+.cocktail-page .main .menu-content .objects {
+    margin-top: 0.4rem;
+}
+
+.cocktail-page .main .menu-content .objects .item {
+    border-radius: var(--radius-m);
+    background: rgba(255, 255, 255, 0.008);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item {
+    align-items: center;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .title-item {
+    font-weight: 620;
+    line-height: 1.25;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider {
+    border: 0;
+    background: transparent;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .header-item {
+    justify-content: center;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .title-item {
+    max-width: 100%;
+    font-size: clamp(1.2rem, 3.2vw, 1.75rem) !important;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    text-align: center;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .specific-item {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item {
+    color: var(--text-muted);
+}
+
+.cocktail-page .featured-block {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.signature-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.45rem;
+    padding: 0.14rem 0.48rem;
+    border-radius: 999px;
+    border: 1px solid rgba(194, 165, 114, 0.45);
+    color: var(--accent);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .cocktail-page .section-anchor {
+        top: -95px;
+    }
+
+    .cocktail-page .main {
+        gap: 0.9rem;
+    }
+
+    .cocktail-page .main .menu-content {
+        padding: 0.9rem 0.7rem;
+    }
+
+    .cocktail-page .cocktail-highlights {
+        gap: 0.42rem;
+    }
+
+    .cocktail-page .cocktail-highlights a {
+        font-size: 0.68rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .cocktail-page .main {
+        gap: 0.95rem;
+    }
+
+    .cocktail-page .main .menu-content {
+        padding: 1rem 0.9rem;
+    }
+}
