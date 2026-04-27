@@ -14,13 +14,12 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    border-bottom: 1px solid var(--border);
-    background: rgba(11, 11, 13, 0.86);
-    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--divider);
+    background: rgba(10, 11, 13, 0.94);
 }
 
 .home-header__inner {
-    min-height: 74px;
+    min-height: 68px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +29,7 @@
 .home-brand {
     display: inline-flex;
     align-items: center;
-    width: min(290px, 56vw);
+    width: min(280px, 55vw);
 }
 
 .home-brand img {
@@ -39,24 +38,24 @@
 }
 
 .hero {
-    padding-top: clamp(2rem, 6vw, 4rem);
+    padding-top: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .hero__grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: clamp(1.6rem, 4vw, 2.8rem);
-    align-items: center;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1.6rem, 4vw, 3.2rem);
+    align-items: start;
 }
 
 .hero__content {
     display: grid;
-    gap: 1.35rem;
+    gap: 1.2rem;
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5.2vw, 4rem);
-    line-height: 1.02;
+    font-size: clamp(2rem, 5.2vw, 3.8rem);
+    line-height: 1;
     letter-spacing: -0.01em;
     font-family: Garibaldino, Georgia, serif;
 }
@@ -64,31 +63,28 @@
 .hero__lead {
     color: var(--text-muted);
     max-width: 58ch;
-    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-size: clamp(1rem, 1.6vw, 1.12rem);
 }
 
 .hero__actions {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     flex-wrap: wrap;
-}
-
-.hero__actions .button-secondary {
-    background: rgba(255, 255, 255, 0.015);
+    padding-top: 0.2rem;
 }
 
 .hero__visual {
-    border-radius: var(--radius-l);
+    min-height: 340px;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: none;
-    min-height: 370px;
+    border: 0;
 }
 
 .hero__visual img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: saturate(0.82) contrast(1.05);
 }
 
 .story__inner {
@@ -104,7 +100,7 @@
 .reservation h2 {
     font-family: Garibaldino, Georgia, serif;
     letter-spacing: 0.02em;
-    font-size: clamp(1.75rem, 3.9vw, 3rem);
+    font-size: clamp(1.75rem, 3.9vw, 2.9rem);
 }
 
 .story p {
@@ -114,57 +110,47 @@
 .section-head {
     display: grid;
     gap: 0.9rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
 }
 
 .experience-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .experience-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-m);
-    background: rgba(255, 255, 255, 0.01);
-    padding: 1.1rem;
+    padding: 0 0 1rem;
     display: grid;
     gap: 0.7rem;
-    transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
-}
-
-.experience-card:hover {
-    border-color: rgba(255, 255, 255, 0.14);
-    transform: none;
-    background: rgba(255, 255, 255, 0.018);
+    border-bottom: 1px solid var(--divider);
 }
 
 .experience-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.2;
 }
 
 .experience-card p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.94rem;
 }
 
 .experience-card__kicker {
     letter-spacing: 0.11em;
     text-transform: uppercase;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--accent);
 }
 
 .reservation__inner {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-l);
-    padding: clamp(1.1rem, 3vw, 2rem);
-    background: rgba(255, 255, 255, 0.01);
+    padding: clamp(1rem, 2.2vw, 1.8rem) 0;
     display: grid;
-    gap: 1rem;
+    gap: 1.2rem;
     grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
+    align-items: start;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
 }
 
 .reservation__inner p {
@@ -173,7 +159,7 @@
 
 .reservation__actions {
     display: grid;
-    gap: 0.6rem;
+    gap: 0.4rem;
 }
 
 .footer .info a {
@@ -192,11 +178,11 @@
     }
 
     .hero__visual {
-        min-height: 300px;
+        min-height: 270px;
     }
 
     .home-header__inner {
-        min-height: 66px;
+        min-height: 62px;
     }
 
     .home-brand {
@@ -206,5 +192,6 @@
     .hero__actions {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 0.45rem;
     }
 }
