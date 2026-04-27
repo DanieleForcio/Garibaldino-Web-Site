@@ -25,7 +25,7 @@
 .info-page .info-card {
     border: 1px solid var(--border);
     border-radius: var(--radius-l);
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    background: rgba(255, 255, 255, 0.01);
     padding: clamp(1rem, 2.4vw, 1.6rem);
     display: grid;
     gap: 0.85rem;
@@ -40,6 +40,7 @@
 .info-page .info-card p,
 .info-page .info-card li {
     color: var(--text-muted);
+    line-height: 1.55;
 }
 
 .info-page .info-grid {
@@ -75,7 +76,7 @@
 .info-page .event-item {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-m);
-    background: rgba(8, 8, 10, 0.45);
+    background: rgba(255, 255, 255, 0.008);
     padding: 0.9rem;
     display: grid;
     gap: 0.4rem;
@@ -96,5 +97,11 @@
 
     .info-page .info-card {
         padding: 0.9rem 0.7rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .info-page .info-grid {
+        grid-template-columns: 1fr;
     }
 }

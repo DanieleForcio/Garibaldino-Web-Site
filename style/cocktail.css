@@ -58,7 +58,7 @@
 .cocktail-page .main .menu-content {
     border: 1px solid var(--border);
     border-radius: var(--radius-l);
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    background: rgba(255, 255, 255, 0.01);
     padding: clamp(1rem, 2.4vw, 1.6rem);
     margin-top: 0;
 }
@@ -82,7 +82,7 @@
 
 .cocktail-page .main .menu-content .objects .item {
     border-radius: var(--radius-m);
-    background: rgba(8, 8, 10, 0.45);
+    background: rgba(255, 255, 255, 0.008);
     border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -92,6 +92,7 @@
 
 .cocktail-page .main .menu-content .objects .item .header-item .title-item {
     font-weight: 620;
+    line-height: 1.25;
 }
 
 .cocktail-page .main .menu-content .objects .item.category-divider {
@@ -124,21 +125,7 @@
 }
 
 .cocktail-page .featured-block {
-    position: relative;
-    overflow: hidden;
-    background: radial-gradient(circle at right top, rgba(194, 165, 114, 0.2), rgba(255, 255, 255, 0.03));
-}
-
-.cocktail-page .featured-block::after {
-    content: '';
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    right: -35px;
-    top: -35px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    pointer-events: none;
+    background: rgba(255, 255, 255, 0.015);
 }
 
 .signature-badge {
@@ -175,5 +162,15 @@
 
     .cocktail-page .cocktail-highlights a {
         font-size: 0.68rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .cocktail-page .main {
+        gap: 0.95rem;
+    }
+
+    .cocktail-page .main .menu-content {
+        padding: 1rem 0.9rem;
     }
 }

@@ -1,17 +1,17 @@
 :root {
-  --bg: #0b0b0d;
-  --bg-elevated: #131316;
-  --surface: #17171c;
-  --surface-muted: #1f1f26;
+  --bg: #0e0f11;
+  --bg-elevated: #141519;
+  --surface: #17191d;
+  --surface-muted: #1c1f24;
   --text: #f6f2ea;
-  --text-muted: #b9b2a5;
+  --text-muted: #cbc3b5;
   --accent: #c2a572;
   --accent-strong: #a98852;
-  --border: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.09);
   --radius-s: 10px;
-  --radius-m: 14px;
-  --radius-l: 22px;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.22);
   --container: min(1120px, 92vw);
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -32,7 +32,7 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #18181f 0%, var(--bg) 45%);
+  background: var(--bg);
   color: var(--text);
   font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   line-height: 1.55;
@@ -46,6 +46,14 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+.button-secondary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 img {
@@ -91,29 +99,30 @@ p {
   font-weight: 650;
   font-size: 0.86rem;
   cursor: pointer;
-  transition: transform 180ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  transition: transform 180ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
 }
 
 .button {
-  background: linear-gradient(130deg, var(--accent) 0%, #d8be90 100%);
-  color: #101013;
-  box-shadow: 0 10px 24px rgba(194, 165, 114, 0.28);
+  background: rgba(194, 165, 114, 0.14);
+  color: var(--text);
+  border-color: rgba(194, 165, 114, 0.45);
+  box-shadow: none;
 }
 
 .button:hover {
-  transform: translateY(-1px);
-  color: #101013;
-  box-shadow: 0 12px 26px rgba(194, 165, 114, 0.42);
+  transform: none;
+  color: var(--text);
+  background: rgba(194, 165, 114, 0.2);
 }
 
 .button-secondary {
-  border-color: var(--border);
-  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.015);
   color: var(--text);
 }
 
 .button-secondary:hover {
-  transform: translateY(-1px);
+  transform: none;
   border-color: var(--accent);
 }
 
@@ -121,7 +130,7 @@ p {
   margin-top: var(--space-10);
   padding: var(--space-6) 0;
   border-top: 1px solid var(--border);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  background: transparent;
 }
 
 .site-footer .info {
@@ -149,5 +158,16 @@ p {
   .button,
   .button-secondary {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
