@@ -50,7 +50,7 @@
 .hero__content {
     display: grid;
     gap: 1rem;
-    max-width: 56ch;
+    max-width: 58ch;
     position: relative;
     z-index: 2;
 }
@@ -68,7 +68,7 @@
 }
 
 .hero h1 {
-    font-size: clamp(1.95rem, 4.2vw, 3.15rem);
+    font-size: clamp(2rem, 4.4vw, 3.25rem);
     line-height: 1.03;
     letter-spacing: -0.006em;
     font-family: Garibaldino, Georgia, serif;
@@ -95,20 +95,30 @@
 
 .story {
     position: relative;
-    margin-block: clamp(1.5rem, 4vw, 3rem) clamp(2.8rem, 7vw, 5.5rem);
-    padding-block: clamp(2rem, 5vw, 3rem);
+    margin-block: clamp(1.6rem, 4vw, 3.2rem) clamp(2.8rem, 7vw, 5.5rem);
+    padding-block: clamp(2.3rem, 5.5vw, 3.4rem);
 }
 
 .story__inner {
     width: min(1120px, 92vw);
     margin-inline: auto;
     display: grid;
-    gap: 1rem;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(1.2rem, 3vw, 2.4rem);
+    align-items: start;
     text-align: left;
 }
 
-.story__inner > * {
-    max-width: 68ch;
+.story__text {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 52ch;
+    padding-top: 0.2rem;
+}
+
+.story__visual {
+    display: grid;
+    gap: 0.65rem;
 }
 
 .story h2,
@@ -124,14 +134,14 @@
 }
 
 .story-carousel {
-    margin-top: clamp(1.2rem, 3vw, 2rem);
     display: grid;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .story-carousel__track {
     position: relative;
-    min-height: clamp(280px, 52vw, 520px);
+    min-height: clamp(320px, 44vw, 520px);
+    background: rgba(255, 255, 255, 0.01);
 }
 
 .story-carousel__slide {
@@ -155,21 +165,34 @@
     object-position: center;
 }
 
+.story-carousel__slide.slide-bar img {
+    object-position: center;
+}
+
+.story-carousel__slide.slide-bottles img {
+    object-position: center top;
+}
+
+.story-carousel__slide.slide-counter img {
+    object-position: center 62%;
+}
+
 .story-carousel__controls {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: 0.65rem;
 }
 
 .story-carousel__btn {
-    border: 1px solid var(--divider);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
     color: var(--text);
-    min-width: 44px;
-    min-height: 38px;
+    min-width: 34px;
+    min-height: 30px;
     cursor: pointer;
     font: inherit;
+    font-size: 0.85rem;
 }
 
 .story-carousel__dots {
@@ -179,7 +202,7 @@
 }
 
 .story-carousel__dot {
-    width: 22px;
+    width: 18px;
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
 }
@@ -293,6 +316,7 @@
 }
 
 @media (max-width: 980px) {
+    .story__inner,
     .reservation__inner,
     .experience-grid {
         grid-template-columns: 1fr;
@@ -307,10 +331,6 @@
     .story {
         padding-block: clamp(1.5rem, 7vw, 2.2rem);
         margin-block: 0.7rem 2.4rem;
-    }
-
-    .story__inner {
-        text-align: left;
     }
 
     .home-header__inner {
