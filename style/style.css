@@ -38,21 +38,33 @@
 }
 
 .hero {
-    padding-top: clamp(1.8rem, 5vw, 3.1rem);
-    padding-bottom: clamp(2.6rem, 7vw, 4.6rem);
-}
-
-.hero__grid {
+    position: relative;
+    min-height: clamp(560px, 86vh, 860px);
+    padding: clamp(5.5rem, 14vh, 9rem) 0 clamp(3rem, 8vh, 5rem);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 1.1fr);
-    gap: clamp(1.4rem, 3.5vw, 2.8rem);
-    align-items: center;
+    align-items: end;
+    isolation: isolate;
+    overflow: hidden;
 }
 
 .hero__content {
     display: grid;
-    gap: 1.05rem;
+    gap: 1rem;
     max-width: 56ch;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__media {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(7, 8, 10, 0.38), rgba(7, 8, 10, 0.78)),
+        linear-gradient(92deg, rgba(7, 8, 10, 0.85) 0%, rgba(7, 8, 10, 0.52) 44%, rgba(7, 8, 10, 0.8) 100%),
+        url("../images/garibaldino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
 
 .hero h1 {
@@ -63,7 +75,7 @@
 }
 
 .hero__lead {
-    color: var(--text-muted);
+    color: rgba(242, 236, 227, 0.9);
     max-width: 52ch;
     font-size: clamp(0.98rem, 1.45vw, 1.06rem);
 }
@@ -81,37 +93,10 @@
     gap: 0.95rem;
 }
 
-.hero__visual {
-    min-height: clamp(360px, 53vw, 560px);
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-    overflow: hidden;
-    border: 0;
-}
-
-.hero__visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: saturate(0.82) contrast(1.05) brightness(0.82);
-}
-
 .story {
     position: relative;
-    isolation: isolate;
-    margin-block: clamp(0.8rem, 3vw, 2rem) clamp(2.8rem, 7vw, 5.5rem);
-    padding-block: clamp(4.5rem, 12vw, 8rem);
-}
-
-.story--immersive {
-    background-image: linear-gradient(180deg, rgba(7, 8, 10, 0.78), rgba(7, 8, 10, 0.8)),
-        linear-gradient(100deg, rgba(7, 8, 10, 0.9) 0%, rgba(7, 8, 10, 0.58) 45%, rgba(7, 8, 10, 0.86) 100%),
-        url("../images/home-hero-bar.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-block: clamp(1.5rem, 4vw, 3rem) clamp(2.8rem, 7vw, 5.5rem);
+    padding-block: clamp(2rem, 5vw, 3rem);
 }
 
 .story__inner {
@@ -135,7 +120,72 @@
 }
 
 .story p {
-    color: rgba(242, 236, 227, 0.9);
+    color: var(--text-muted);
+}
+
+.story-carousel {
+    margin-top: clamp(1.2rem, 3vw, 2rem);
+    display: grid;
+    gap: 0.75rem;
+}
+
+.story-carousel__track {
+    position: relative;
+    min-height: clamp(280px, 52vw, 520px);
+}
+
+.story-carousel__slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    pointer-events: none;
+}
+
+.story-carousel__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.story-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.story-carousel__btn {
+    border: 1px solid var(--divider);
+    background: transparent;
+    color: var(--text);
+    min-width: 44px;
+    min-height: 38px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.story-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.story-carousel__dot {
+    width: 22px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.story-carousel__dot.is-active {
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .experiences {
@@ -243,18 +293,19 @@
 }
 
 @media (max-width: 980px) {
-    .hero__grid,
     .reservation__inner,
     .experience-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero__visual {
-        min-height: 300px;
+    .hero {
+        min-height: clamp(520px, 84vh, 720px);
+        padding-top: clamp(5.2rem, 15vh, 7rem);
+        padding-bottom: clamp(2.3rem, 8vh, 3.5rem);
     }
 
     .story {
-        padding-block: clamp(3rem, 11vw, 4.4rem);
+        padding-block: clamp(1.5rem, 7vw, 2.2rem);
         margin-block: 0.7rem 2.4rem;
     }
 
@@ -280,6 +331,10 @@
         display: grid;
         width: 100%;
         gap: 0.45rem;
+    }
+
+    .story-carousel__track {
+        min-height: clamp(240px, 64vw, 360px);
     }
 
     .experiences {
