@@ -1,83 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/foundation.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Garibaldino | Spizzico Urbano | Clhub </title>
+    <title>Garibaldino | Spizzico Urbano | Club</title>
 </head>
 
 <body>
-    
-    <div class="main">
-        <div class="logo" style="margin-top: 40px">
-            <div class="content">
-                <img src="images/logo_1.jpg" alt="">
-            </div>
-            
-
-            <div class="interaction" style="margin-top: 30px">
-               
-                <a href="pages/Cocktailbar.html">
-                    <input class="capitalize" type="button" value="COCKTAIL BAR">
-                </a>
-               
-                <a href="pages/main.html">
-                    <input class="capitalize" type="button" value="CUCINA">
-                </a>
-                <a href="pages/Enoteca.html">
-                    <input class="capitalize" type="button" value="ENOTECA">
-                </a>
-               
-            </div>
-
+    <header class="home-header">
+        <div class="container home-header__inner">
+            <a class="home-brand" href="index.html" aria-label="Garibaldino home">
+                <img src="images/scrittagaribaldino.png" alt="Garibaldino">
+            </a>
+            <a class="button" href="#prenota">Prenota ora</a>
         </div>
-    </div>
+    </header>
 
-    <div class="footer" >
-        <div class="info">
-            <span style="margin-top: 80px">
-                Wifi: GaribaldinoWifi
-            </span>
-            <span style="margin-bottom: 40px">
-                Password: SOLOSEMIOFFRIUNCICCHETTO
-            </span>
+    <main>
+        <section class="hero section">
+            <div class="hero__media" aria-hidden="true"></div>
+            <div class="container hero__content">
+                    <p class="eyebrow">SASSUOLO · OSPITALITÀ CONTEMPORANEA</p>
+                    <h1>Il ritmo di Garibaldino: cucina, cocktail ed enoteca in un'unica esperienza.</h1>
+                    <p class="hero__lead">
+                        Garibaldino è il punto d'incontro tra convivialità emiliana, energia urbana e cura del dettaglio.
+                        Dall'aperitivo alla cena, ogni momento è pensato per farti sentire accolto.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="button" href="#esperienze">Scopri le esperienze</a>
+                        <div class="hero__links">
+                            <a class="button-secondary" href="#prenota">Prenotazioni & contatti</a>
+                            <a class="button-secondary" href="pages/Eventi.html">Eventi</a>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="section story" id="story">
+            <div class="container story__inner">
+                <p class="eyebrow">Identità Garibaldino</p>
+                <h2>Spizzico urbano con anima di quartiere.</h2>
+                <p>
+                    Qui trovi la spontaneità del locale di fiducia e la cura di una proposta costruita con carattere:
+                    piatti sfiziosi, drink ben eseguiti, selezione vini pensata per accompagnare ogni tavolo.
+                </p>
+                <p>
+                    Garibaldino non è solo una lista di prodotti: è un'atmosfera fatta di musica, persone e dettagli,
+                    da vivere con leggerezza ma senza compromessi sulla qualità.
+                </p>
+                <div class="story-carousel" aria-label="Galleria fotografica Garibaldino">
+                    <div class="story-carousel__track">
+                        <figure class="story-carousel__slide is-active">
+                            <img src="images/garibaldino.jpg" alt="Bancone del Garibaldino illuminato">
+                        </figure>
+                        <figure class="story-carousel__slide">
+                            <img src="images/logo_1.jpg" alt="Ingresso del locale Garibaldino">
+                        </figure>
+                        <figure class="story-carousel__slide">
+                            <img src="images/garibaldino.jpg" alt="Atmosfera serale del bar Garibaldino">
+                        </figure>
+                    </div>
+                    <div class="story-carousel__controls">
+                        <button class="story-carousel__btn" type="button" data-dir="-1" aria-label="Foto precedente">←</button>
+                        <div class="story-carousel__dots" aria-hidden="true">
+                            <span class="story-carousel__dot is-active"></span>
+                            <span class="story-carousel__dot"></span>
+                            <span class="story-carousel__dot"></span>
+                        </div>
+                        <button class="story-carousel__btn" type="button" data-dir="1" aria-label="Foto successiva">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experiences" id="esperienze">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Le tre anime</p>
+                    <h2>Scegli il tuo percorso, resta per l'esperienza completa.</h2>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Cucina</p>
+                        <h3>Comfort urbano, gusto diretto.</h3>
+                        <p>Taglieri, burger, fritti e proposte da condividere: una cucina conviviale pensata per stare bene insieme.</p>
+                        <a class="button-secondary" href="pages/main.html">Vai alla cucina</a>
+                    </article>
+
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Cocktail Bar</p>
+                        <h3>Classici, signature e aperitivo Garibaldino.</h3>
+                        <p>Dal pre-serata ai grandi classici: equilibrio, ritmo e una drink list facile da amare.</p>
+                        <a class="button-secondary" href="pages/Cocktailbar.html">Vai al cocktail bar</a>
+                    </article>
+
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Enoteca</p>
+                        <h3>Etichette italiane e bollicine da occasione.</h3>
+                        <p>Una carta vini ampia per accompagnare la serata, dal calice immediato alla bottiglia speciale.</p>
+                        <a class="button-secondary" href="pages/Enoteca.html">Vai all'enoteca</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reservation" id="prenota">
+            <div class="container reservation__inner">
+                <div class="reservation__content">
+                    <p class="eyebrow">Prenotazioni</p>
+                    <h2>Prenota il tuo tavolo e vivi Garibaldino al tuo ritmo.</h2>
+                    <p>Per gruppi, serate speciali o semplicemente per assicurarti il posto migliore.</p>
+                </div>
+                <div class="reservation__actions">
+                    <a class="button" href="tel:+0536883568">Chiama: 0536 883568</a>
+                    <a class="button-secondary" href="mailto:garibaldino.sassuolo@gmail.com">Scrivi una mail</a>
+                    <a class="button-secondary" href="pages/ContattiPrenotazioni.html">Contatti completi</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer site-footer">
+        <div class="container info">
+            <span class="eyebrow">Wifi: GaribaldinoWifi</span>
+            <span>Password: SOLOSEMIOFFRIUNCICCHETTO</span>
+            <span>Info & Prenotazioni</span>
+            <span><a href="mailto:garibaldino.sassuolo@gmail.com">garibaldino.sassuolo@gmail.com</a></span>
+            <span>📞 <a href="tel:+0536883568">0536 883568</a></span>
             <span>
-              Info & Prenotazioni
+                <script type="text/javascript">
+                    window.onload = function () {
+                        (function (d, script) {
+                            script = d.createElement('script');
+                            script.type = 'text/javascript';
+                            script.async = true;
+                            script.src = 'https://w.app/widget-v1/8GNFs3.js';
+                            d.getElementsByTagName('head')[0].appendChild(script);
+                        }(document));
+                    };
+                </script>
             </span>
-            <span >
-                  <a href="mailto:garibaldino.sassuolo@gmail.com">garibaldino.sassuolo@gmail.com </a>
-            </span >
-            <span>
-              📞
-                <a href="tel:+0536883568">0536 883568</a>
-
-            </span>
-            <span>
-              <script type="text/javascript">
-                  window.onload = function(){
-                  (function(d, script) {
-                  script = d.createElement('script');
-                  script.type = 'text/javascript';
-                  script.async = true;
-                  script.src = 'https://w.app/widget-v1/8GNFs3.js';
-                  d.getElementsByTagName('head')[0].appendChild(script);
-                  }(document));
-                  };
-              </script>
-            </span>
-
-
         </div>
-    </div>
-
-
-    
-
+    </footer>
 </body>
+<script src="scripts/home.js"></script>
 
 </html>

@@ -1,0 +1,100 @@
+.cucina-page .viewlogo .content {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.cucina-page .cucina-intro {
+    max-width: 74ch;
+    text-align: center;
+    color: var(--internal-muted);
+    font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+    line-height: 1.6;
+}
+
+.cucina-page .cucina-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.cucina-page .cucina-highlights a {
+    padding: 0.08rem 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--internal-muted);
+    border-bottom: 1px solid transparent;
+}
+
+.cucina-page .cucina-highlights a:hover {
+    border-bottom-color: var(--internal-divider);
+    color: var(--internal-text);
+}
+
+.cucina-page .main {
+    display: grid;
+    gap: 0.95rem;
+}
+
+.cucina-page .section-anchor {
+    position: relative;
+    top: -110px;
+}
+
+.cucina-page .main .menu-content {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+}
+
+.cucina-page .main .menu-content .title {
+    margin-bottom: 0.2rem;
+}
+
+.cucina-page .main .menu-content .title .item-subtitle {
+    color: var(--internal-muted);
+    max-width: 76ch;
+    margin: 0;
+}
+
+.cucina-page .main .menu-content .objects {
+    margin-top: 0.2rem;
+}
+
+.cucina-page .main .menu-content .objects .item {
+    border-radius: 0;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+}
+
+.cucina-page .main .menu-content .objects .item .header-item {
+    align-items: center;
+}
+
+.cucina-page .main .menu-content .objects .item .header-item .specific-item {
+    color: var(--internal-muted);
+    font-weight: 600;
+}
+
+.cucina-page .main .menu-content .objects .item .info-item {
+    color: var(--internal-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .cucina-page .section-anchor {
+        top: -92px;
+    }
+
+    .cucina-page .cucina-highlights a {
+        font-size: 0.66rem;
+    }
+}

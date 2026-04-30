@@ -4,256 +4,344 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-
-    color: white;
-
-    font-family: Gotham-Black, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
 }
 
-
-
-input {
-    padding: 2px;
-    margin: 2px;
-
-    color: black;
-}
-
-body {
-    background-color: black;
-}
-
-.background-body {
-    background-color: black;
-}
-
-
-.main {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-}
-
-.main .logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.main .logo .content {
-    display: flex;
-    flex: 1;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.main .logo .content img{
-  width: 80%;
-}
-
-.main .logo .info {
-    margin-bottom: 15px;
-
-    font-size: 32px;
-}
-
-.main .logo .interaction {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    min-height: 100px;
-
-    max-width: 350px;
-}
-
-.main .logo .interaction a {
-    min-width: 250px;
-    min-height: 80px;
-
-    cursor: pointer;
-}
-
-
-.main .logo .interaction a input {
-    width: 100%;
-    height: 70px;
-    margin-top: 15px;
-    border-radius: 15px;
-    border: 2px solid black;
-    background-color: white;
-
-    color: black;
-    font-size: large;
-    font-weight: bolder;
-
-    text-transform: uppercase;
-    font-family: Gotham-Black, sans-serif;
-    font-variant-caps: titling-caps;
-    cursor: pointer;
-}
-
-.main .logo .interaction a input:hover {
-    width: 100%;
-    height: 70px;
-
-    margin-top: 15px;
-    border-radius: 15px;
-
-    font-size: large;
-    font-weight: bolder;
-    background-color: transparent;
-
-    transition: 0.4s;
-
-    font-variant-caps: titling-caps;
-    cursor: pointer;
-
-    color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px rgb(0, 60, 255),
-        0 0 82px rgb(0, 60, 255),
-        0 0 92px rgb(0, 60, 255),
-        0 0 102px rgb(0, 60, 255),
-        0 0 151px rgb(0, 60, 255);
-    border: 2px solid #fff;
-
-    box-shadow: 0 0 .2rem #fff,
-        0 0 .2rem #fff,
-        0 0 2rem rgb(0, 60, 255),
-        0 0 0.8rem rgb(0, 60, 255),
-        0 0 2.8rem rgb(0, 60, 255),
-        inset 0 0 1.3rem rgb(0, 60, 255);
-}
-
-.footer {
-
-    position: relative;
+.home-header {
+    position: sticky;
     top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--divider);
+    background: rgba(10, 11, 13, 0.94);
+}
 
+.home-header__inner {
+    min-height: 68px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-
-    width: 100%;
-
-    margin-bottom: 50px;
+    gap: 1rem;
 }
 
-
-.footer .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.home-brand {
+    display: inline-flex;
     align-items: center;
-
-
-    font-size: 24px;
+    width: min(280px, 55vw);
 }
 
-.footer .info span {
-    margin: 5px;
+.home-brand img {
+    width: 100%;
+    object-fit: contain;
 }
 
-.footer .references {
-    margin-right: 35px;
+.hero {
+    position: relative;
+    min-height: clamp(560px, 86vh, 860px);
+    padding: clamp(5.5rem, 14vh, 9rem) 0 clamp(3rem, 8vh, 5rem);
+    display: grid;
+    align-items: end;
+    isolation: isolate;
+    overflow: hidden;
 }
 
-.footer .references a img {
-
-    max-width: 100px;
-    max-height: 100px;
-
+.hero__content {
+    display: grid;
+    gap: 1rem;
+    max-width: 56ch;
+    position: relative;
+    z-index: 2;
 }
 
-.footer .info .orari {
+.hero__media {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(7, 8, 10, 0.38), rgba(7, 8, 10, 0.78)),
+        linear-gradient(92deg, rgba(7, 8, 10, 0.85) 0%, rgba(7, 8, 10, 0.52) 44%, rgba(7, 8, 10, 0.8) 100%),
+        url("../images/garibaldino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: clamp(1.95rem, 4.2vw, 3.15rem);
+    line-height: 1.03;
+    letter-spacing: -0.006em;
+    font-family: Garibaldino, Georgia, serif;
+}
+
+.hero__lead {
+    color: rgba(242, 236, 227, 0.9);
+    max-width: 52ch;
+    font-size: clamp(0.98rem, 1.45vw, 1.06rem);
+}
+
+.hero__actions {
+    display: grid;
+    justify-items: start;
+    gap: 0.75rem;
+    padding-top: 0.55rem;
+}
+
+.hero__links {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.95rem;
 }
 
-@media screen and (max-width: 1100px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.story {
+    position: relative;
+    margin-block: clamp(1.5rem, 4vw, 3rem) clamp(2.8rem, 7vw, 5.5rem);
+    padding-block: clamp(2rem, 5vw, 3rem);
+}
 
+.story__inner {
+    width: min(1120px, 92vw);
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+}
+
+.story__inner > * {
+    max-width: 68ch;
+}
+
+.story h2,
+.section-head h2,
+.reservation h2 {
+    font-family: Garibaldino, Georgia, serif;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.75rem, 3.9vw, 2.9rem);
+}
+
+.story p {
+    color: var(--text-muted);
+}
+
+.story-carousel {
+    margin-top: clamp(1.2rem, 3vw, 2rem);
+    display: grid;
+    gap: 0.75rem;
+}
+
+.story-carousel__track {
+    position: relative;
+    min-height: clamp(280px, 52vw, 520px);
+}
+
+.story-carousel__slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    pointer-events: none;
+}
+
+.story-carousel__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.story-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.story-carousel__btn {
+    border: 1px solid var(--divider);
+    background: transparent;
+    color: var(--text);
+    min-width: 44px;
+    min-height: 38px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.story-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.story-carousel__dot {
+    width: 22px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.story-carousel__dot.is-active {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.experiences {
+    padding-top: clamp(2.5rem, 7vw, 5rem);
+    padding-bottom: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+.section-head {
+    display: grid;
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+    max-width: 72ch;
+}
+
+.experience-grid {
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+}
+
+.experience-card {
+    position: relative;
+    padding: 1.15rem 0 1.1rem;
+    display: grid;
+    gap: 0.72rem;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    top: 1.15rem;
+    right: 0;
+    width: 1px;
+    height: calc(100% - 2.3rem);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-card:last-child::before {
+    display: none;
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.experience-card p {
+    color: var(--text-muted);
+    font-size: 0.94rem;
+}
+
+.experience-card__kicker {
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    color: var(--accent);
+}
+
+.reservation {
+    padding-top: clamp(2.4rem, 6vw, 4.4rem);
+    padding-bottom: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.reservation__inner {
+    padding: clamp(1.4rem, 3vw, 2.4rem) 0;
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: start;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+}
+
+.reservation__content {
+    display: grid;
+    gap: 0.85rem;
+    max-width: 62ch;
+}
+
+.reservation__inner p {
+    color: var(--text-muted);
+}
+
+.reservation__actions {
+    display: grid;
+    gap: 0.55rem;
+    align-content: start;
+}
+
+.footer .info a {
+    color: var(--text);
+}
+
+.footer .info a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+    .experience-card::before {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .reservation__inner,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: clamp(520px, 84vh, 720px);
+        padding-top: clamp(5.2rem, 15vh, 7rem);
+        padding-bottom: clamp(2.3rem, 8vh, 3.5rem);
+    }
+
+    .story {
+        padding-block: clamp(1.5rem, 7vw, 2.2rem);
+        margin-block: 0.7rem 2.4rem;
+    }
+
+    .story__inner {
+        text-align: left;
+    }
+
+    .home-header__inner {
+        min-height: 62px;
+    }
+
+    .home-brand {
+        width: min(220px, 52vw);
+    }
+
+    .hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+    }
+
+    .hero__links {
+        display: grid;
         width: 100%;
+        gap: 0.45rem;
     }
 
-    .footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-
-        width: 100%;
-
-        margin-top: 70px;
+    .story-carousel__track {
+        min-height: clamp(240px, 64vw, 360px);
     }
 
-    .footer .info {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        font-size: 24px;
+    .experiences {
+        padding-top: 2rem;
     }
 
-    .footer .info .orari {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .reservation__inner {
+        gap: 1.2rem;
     }
-
-    .footer .references {
-        position: fixed;
-        top: 0;
-        left: 70%;
-
-        margin-right: 35px;
-    }
-
-    .main .logo .info {
-        margin-bottom: 15px;
-
-        font-size: 24px;
-    }
-
-    .main .logo .interaction {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        min-height: 100px;
-        max-height: 200px;
-
-        max-width: 300px;
-    }
-
-
 }

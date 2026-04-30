@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/foundation.css">
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/enoteca.css">
     <title>Garibaldino | Cocktail Bar </title>
 </head>
 
-<body class="background-body">
+<body class="background-body enoteca-page">
 
     <div class="header">
         <!-- <div class="back">
@@ -16,9 +18,9 @@
                 <img src="../images/back-white.png" class="back" alt="">
             </a>
         </div>-->
-        <a href="../index.html" style="height:50%; width:50%">
-            <img src="../images/back-white.png" alt="" style="height:100%;width:100%">
-        </a>
+      <a href="../index.html" class="header-back">
+        <img src="../images/back-white.png" alt="Torna alla home">
+      </a>
         <div class="garibaldino"></div>
     </div>
 
@@ -27,6 +29,15 @@
             <h1 class="title1 capitalize neonTextBlue neonBoxBlue">
                 Enoteca
             </h1>
+            <p class="enoteca-intro">
+                Una carta vini pensata per accompagnare tutta la serata: bianchi, rossi, bollicine e dessert,
+                con etichette immediate e bottiglie da occasione.
+            </p>
+            <div class="enoteca-highlights">
+                <a href="#vini-bianchi">Bianchi</a>
+                <a href="#vini-rossi">Rossi</a>
+                <a href="#bollicine-italia">Bollicine</a>
+            </div>
         </div>
     </div>
 
@@ -34,26 +45,26 @@
     <div class="navbar">
         <div class="nav">
             <div>
-                <a href="#VINI BIANCHI">VINI BIANCHI</a>
+                <a href="#vini-bianchi">VINI BIANCHI</a>
             </div>
             <div>
-                <a href="#VINI ROSSI">VINI ROSSI</a>
+                <a href="#vini-rossi">VINI ROSSI</a>
             </div>
             <div>
-                <a href="#BOLLICINE ITALIA">BOLLICINE</a>
+                <a href="#bollicine-italia">BOLLICINE</a>
             </div>
             <div>
-                <a href="#ROSATO">ROSATO</a>
+                <a href="#rosato">ROSATO</a>
             </div>
             <div>
-                <a href="#VINI DA DESSERT">VINI DA DESSERT</a>
+                <a href="#vini-da-dessert">VINI DA DESSERT</a>
             </div>
         </div>
     </div>
 
-    <a name="VINI BIANCHI"></a>
+    <a id="vini-bianchi" class="section-anchor"></a>
     <div class="main">
-        <div class="menu-content">
+        <div class="menu-content featured-block">
             <div class="title">
                 <h1 class="item-title">VINI BIANCHI</h1>
             </div>
@@ -139,7 +150,7 @@
         </div>
 
 
-        <a name="VINI ROSSI"></a>
+        <a id="vini-rossi" class="section-anchor"></a>
         <div class="menu-content">
             <div class="title">
                 <h1 class="item-title">VINI ROSSI</h1>
@@ -247,7 +258,7 @@
         </div>
 
 
-        <a name="BOLLICINE ITALIA"></a>
+        <a id="bollicine-italia" class="section-anchor"></a>
         <div class="menu-content">
             <div class="title">
                 <h1 class="item-title">BOLLICINE</h1>
@@ -376,7 +387,7 @@
         </div>
 
 
-        <a name="ROSATO"></a>
+        <a id="rosato" class="section-anchor"></a>
         <div class="menu-content">
             <div class="title">
                 <h1 class="item-title">ROSATO</h1>
@@ -393,7 +404,7 @@
         </div>
 
 
-        <a name="VINI DA DESSERT"></a>
+        <a id="vini-da-dessert" class="section-anchor"></a>
         <div class="menu-content">
             <div class="title">
                 <h1 class="item-title">VINI DA DESSERT</h1>
