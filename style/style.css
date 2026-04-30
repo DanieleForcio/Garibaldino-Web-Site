@@ -49,12 +49,14 @@
 
 .hero__content {
     display: grid;
-    gap: 1rem;
-    max-width: 46ch;
+    gap: 1.3rem;
+    max-width: 40ch;
     position: relative;
     z-index: 2;
-    margin-left: 0;
-    justify-items: start;
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+    padding-block: clamp(2rem, 6vh, 4rem);
 }
 
 .hero__media {
@@ -70,32 +72,26 @@
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.08;
-    letter-spacing: -0.004em;
-    font-family: Garibaldino, Georgia, serif;
-    max-width: 16ch;
+    font-size: clamp(2rem, 4.2vw, 3.1rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    font-weight: 500;
+    max-width: 15ch;
 }
 
 .hero__lead {
     color: rgba(242, 236, 227, 0.9);
-    max-width: 44ch;
-    font-size: clamp(0.97rem, 1.35vw, 1.02rem);
+    max-width: 38ch;
+    font-size: clamp(0.98rem, 1.32vw, 1.02rem);
     line-height: 1.6;
 }
 
 .hero__actions {
     display: grid;
-    justify-items: start;
-    gap: 0.95rem;
-    padding-top: 0.7rem;
-}
-
-.hero__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-    padding-top: 0.25rem;
+    justify-items: center;
+    gap: 0;
+    padding-top: 0.95rem;
 }
 
 .story {
@@ -349,12 +345,6 @@
     .hero__actions {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 0.45rem;
-    }
-
-    .hero__links {
-        display: grid;
-        width: 100%;
         gap: 0.45rem;
     }
 
