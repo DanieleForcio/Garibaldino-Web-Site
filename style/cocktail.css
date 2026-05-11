@@ -1,0 +1,152 @@
+.cocktail-page .viewlogo .content {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.cocktail-page .cocktail-intro {
+    max-width: 70ch;
+    text-align: center;
+    color: var(--internal-muted);
+    font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+    line-height: 1.65;
+}
+
+.cocktail-page .cocktail-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    max-width: 760px;
+}
+
+.cocktail-page .cocktail-highlights a {
+    padding: 0.08rem 0;
+    border: 0;
+    color: var(--internal-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+}
+
+.cocktail-page .cocktail-highlights a:hover {
+    border-bottom-color: var(--internal-divider);
+    color: var(--internal-text);
+}
+
+.cocktail-page .navbar .nav {
+    width: min(1160px, 96vw);
+}
+
+.cocktail-page .main {
+    display: grid;
+    gap: 1rem;
+}
+
+.cocktail-page .section-anchor {
+    position: relative;
+    top: -110px;
+}
+
+.cocktail-page .main .menu-content {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+}
+
+.cocktail-page .main .menu-content .title {
+    margin-bottom: 0.2rem;
+}
+
+.cocktail-page .main .menu-content .title .item-subtitle {
+    max-width: 76ch;
+    margin: 0;
+}
+
+.cocktail-page .main .menu-content .objects {
+    margin-top: 0.2rem;
+}
+
+.cocktail-page .main .menu-content .objects .item {
+    border-radius: 0;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item {
+    align-items: center;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .title-item {
+    font-weight: 560;
+    line-height: 1.25;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider {
+    border-bottom: 1px solid var(--internal-divider);
+    padding-top: 1rem;
+    padding-bottom: 0.55rem;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .header-item {
+    justify-content: flex-start;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .title-item {
+    max-width: 100%;
+    font-size: clamp(1.1rem, 3.1vw, 1.55rem) !important;
+    letter-spacing: 0.06em;
+    color: var(--internal-accent);
+    text-align: left;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .specific-item {
+    font-size: 0.85rem;
+    color: var(--internal-muted);
+    font-weight: 600;
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item {
+    color: var(--internal-muted);
+}
+
+.cocktail-page .featured-block .objects span {
+    margin-top: 0.25rem;
+    display: inline-flex;
+    font-size: 0.78rem;
+    color: var(--internal-subtle);
+    letter-spacing: 0.07em;
+}
+
+.signature-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.4rem;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    color: var(--internal-accent);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .cocktail-page .section-anchor {
+        top: -92px;
+    }
+
+    .cocktail-page .cocktail-highlights {
+        gap: 0.55rem;
+    }
+
+    .cocktail-page .cocktail-highlights a {
+        font-size: 0.66rem;
+    }
+}
