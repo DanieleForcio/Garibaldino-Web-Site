@@ -1,4 +1,29 @@
 (() => {
+  const overlay = document.querySelector(".menu-overlay");
+  const trigger = document.querySelector(".menu-trigger");
+  const closeBtn = document.querySelector(".menu-overlay__close");
+
+  if (overlay && trigger && closeBtn) {
+    const links = Array.from(overlay.querySelectorAll("a"));
+    const openMenu = () => {
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      trigger.setAttribute("aria-expanded", "true");
+    };
+    const closeMenu = () => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      trigger.setAttribute("aria-expanded", "false");
+    };
+
+    trigger.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closeMenu();
+    });
+    links.forEach((link) => link.addEventListener("click", closeMenu));
+  }
+
   const carousel = document.querySelector(".story-carousel");
   if (!carousel) return;
 

@@ -26,10 +26,110 @@
     gap: 1rem;
 }
 
+.home-header__actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
 .home-brand {
     display: inline-flex;
     align-items: center;
     width: min(280px, 55vw);
+}
+
+.menu-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 46px;
+    padding: 0.72rem 0.95rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.menu-trigger:hover {
+    color: var(--text);
+    border-color: var(--divider);
+}
+
+.menu-trigger__icon {
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    position: relative;
+}
+
+.menu-trigger__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4px;
+    border-top: 1px solid currentColor;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    background: rgba(7, 8, 10, 0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-overlay__inner {
+    min-height: 100%;
+    display: grid;
+    align-content: center;
+    gap: clamp(1.2rem, 3vw, 2.2rem);
+    padding-block: clamp(2.5rem, 8vh, 5rem);
+}
+
+.menu-overlay__close {
+    justify-self: end;
+    border: 0;
+    background: transparent;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.74rem;
+    cursor: pointer;
+}
+
+.menu-overlay__close:hover {
+    color: var(--text);
+}
+
+.menu-overlay__nav {
+    display: grid;
+    gap: 0.9rem;
+    justify-items: start;
+}
+
+.menu-overlay__nav a {
+    font-family: Garibaldino, Georgia, serif;
+    font-size: clamp(1.6rem, 4.4vw, 3.1rem);
+    letter-spacing: 0.03em;
+    color: var(--text);
+}
+
+.menu-overlay__nav a:hover {
+    color: var(--accent);
 }
 
 .home-brand img {
@@ -355,6 +455,15 @@
 
     .home-header__inner {
         min-height: 62px;
+    }
+
+    .home-header__actions {
+        gap: 0.45rem;
+    }
+
+    .menu-trigger {
+        min-height: 42px;
+        padding: 0.62rem 0.75rem;
     }
 
     .home-brand {

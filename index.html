@@ -15,9 +15,28 @@
             <a class="home-brand" href="index.html" aria-label="Garibaldino home">
                 <img src="images/scrittagaribaldino.png" alt="Garibaldino">
             </a>
-            <a class="button" href="#prenota">Prenota ora</a>
+            <div class="home-header__actions">
+                <a class="button" href="#prenota">Prenota ora</a>
+                <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="site-menu-overlay">
+                    Menu
+                    <span class="menu-trigger__icon" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
     </header>
+
+    <div class="menu-overlay" id="site-menu-overlay" aria-hidden="true">
+        <div class="menu-overlay__inner container">
+            <button class="menu-overlay__close" type="button" aria-label="Chiudi menu">Chiudi</button>
+            <nav class="menu-overlay__nav" aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="pages/main.html">Cucina</a>
+                <a href="pages/Cocktailbar.html">Cocktail Bar</a>
+                <a href="pages/Enoteca.html">Enoteca</a>
+                <a href="pages/ContattiPrenotazioni.html">Contatti & Prenotazioni</a>
+            </nav>
+        </div>
+    </div>
 
     <main>
         <section class="hero section">
