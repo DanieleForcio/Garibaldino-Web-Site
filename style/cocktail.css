@@ -1150,3 +1150,76 @@ body.modal-open { overflow: hidden; }
   background: transparent;
   border: 1px solid rgba(191, 225, 159, 0.75);
 }
+
+/* Altrove illustrated tiki menu */
+.cocktail-page .altrove-illustrated {
+  padding: clamp(1.8rem, 4vw, 2.6rem);
+  background:
+    radial-gradient(circle at 16% 12%, rgba(255, 214, 146, 0.45), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(191, 223, 163, 0.38), transparent 34%),
+    linear-gradient(180deg, #f3dfb6 0%, #e6cb98 58%, #dcc08c 100%);
+  color: #3a2417;
+  border: 1px solid rgba(120, 77, 40, 0.35);
+}
+
+.cocktail-page .altrove-illustrated__header {
+  text-align: left;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(126, 79, 39, 0.35);
+}
+.cocktail-page .altrove-illustrated__kicker {font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#7a4b2a;}
+.cocktail-page .altrove-illustrated__title {font-family: Garibaldino, serif;font-size:clamp(2.2rem,6vw,3.7rem);letter-spacing:.12em;color:#6a341c;}
+.cocktail-page .altrove-illustrated__intro {color:#5a3721;max-width:66ch;}
+
+.cocktail-page .altrove-illustrated__grid {display:grid;gap:.8rem;}
+.cocktail-page .altrove-item {
+  display:grid;
+  grid-template-columns: 74px 1fr;
+  gap:.8rem;
+  align-items:start;
+  padding:.7rem .5rem .8rem;
+  border-bottom: 1px dashed rgba(117, 71, 33, 0.35);
+}
+.cocktail-page .altrove-item:nth-child(even) {grid-template-columns: 1fr 74px;}
+.cocktail-page .altrove-item:nth-child(even) .altrove-item__art {order:2;}
+
+.cocktail-page .altrove-item__art {
+  width: 66px;
+  height: 66px;
+  display:grid;
+  place-items:center;
+  font-size: 1.8rem;
+  background: rgba(255, 241, 212, 0.65);
+  border: 1px solid rgba(131, 86, 45, 0.32);
+  border-radius: 50%;
+}
+
+.cocktail-page .altrove-item__content h3 {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:.6rem;
+  margin:0;
+  font-size: clamp(1.14rem, 2.45vw, 1.42rem);
+  color:#4f2919;
+}
+.cocktail-page .altrove-item__content h3 span {font-size:.84rem;color:#7b4a2a;}
+.cocktail-page .altrove-item__content .ing {color:#6e4529; margin-top:.2rem;}
+.cocktail-page .altrove-item__content p {margin-top:.22rem; color:#4e3121;}
+.cocktail-page .altrove-item__content .finish {font-style: italic; color:#643f27;}
+
+.cocktail-page .altrove-badge {
+  display:inline-block;
+  margin-top:.2rem;
+  padding:.03rem .4rem;
+  font-size:.56rem;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  color:#35552f;
+  border:1px solid rgba(73,119,60,.45);
+}
+
+.cocktail-page .altrove-item--mocktail {
+  background: rgba(222, 238, 200, 0.3);
+}
