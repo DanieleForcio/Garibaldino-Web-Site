@@ -1,6 +1,6 @@
 .info-page .viewlogo .content {
     display: grid;
-    gap: 1rem;
+    gap: 1.3rem;
     justify-items: center;
 }
 
@@ -9,12 +9,36 @@
     text-align: center;
     color: var(--text-muted);
     font-size: clamp(0.98rem, 1.6vw, 1.08rem);
-    line-height: 1.6;
+    line-height: 1.68;
+}
+
+.info-page .viewlogo {
+    padding: clamp(2.8rem, 8.5vw, 5rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.info-page .navbar {
+    margin-top: clamp(0.4rem, 1.4vw, 0.9rem);
+}
+
+.info-page .navbar .nav {
+    width: min(1120px, 94vw);
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.1rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.info-page .navbar .nav div a {
+    min-height: 32px;
+    padding: 0.3rem 0;
+    line-height: 1.2;
 }
 
 .info-page .main {
     display: grid;
-    gap: 0.95rem;
+    gap: 1.5rem;
+    padding-top: clamp(1.2rem, 3.8vw, 2.2rem);
 }
 
 .info-page .section-anchor {
@@ -26,9 +50,9 @@
     border: 0;
     border-radius: 0;
     background: transparent;
-    padding: 0.6rem 0;
+    padding: 0.9rem 0;
     display: grid;
-    gap: 0.85rem;
+    gap: 1rem;
     border-bottom: 1px solid var(--divider);
 }
 
@@ -46,26 +70,48 @@
 
 .info-page .info-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
 }
 
 .info-page .cta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.7rem;
+    gap: 0.85rem;
+}
+
+.info-page .contact-grid {
+    margin-top: 0.2rem;
+}
+
+.info-page .contact-block {
+    display: grid;
+    gap: 0.42rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-page .contact-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.info-page .contact-block a {
+    color: var(--text);
 }
 
 .info-page .hours {
     display: grid;
-    gap: 0.45rem;
+    gap: 0.6rem;
 }
 
 .info-page .hours-row {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding-bottom: 0.45rem;
+    padding: 0.1rem 0 0.65rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -94,17 +140,27 @@
         top: -92px;
     }
 
+    .info-page .viewlogo {
+        padding: clamp(2.2rem, 8vw, 3.2rem) 0 clamp(1.2rem, 4vw, 1.9rem);
+    }
+
+    .info-page .navbar .nav {
+        justify-content: flex-start;
+        gap: 0.45rem 0.9rem;
+        padding: 0.55rem 0.6rem;
+    }
+
     .info-page .info-grid {
         grid-template-columns: 1fr;
     }
 
     .info-page .info-card {
-        padding: 0.5rem 0;
+        padding: 0.7rem 0;
     }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
     .info-page .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
