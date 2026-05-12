@@ -1,0 +1,690 @@
+.cocktail-page .viewlogo .content {
+    display: grid;
+    gap: 1.35rem;
+    justify-items: center;
+}
+
+.cocktail-page .cocktail-intro {
+    max-width: 70ch;
+    text-align: center;
+    color: var(--internal-muted);
+    font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+    line-height: 1.68;
+}
+
+.cocktail-page .cocktail-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.2rem;
+    max-width: 760px;
+}
+
+.cocktail-page .cocktail-highlights a {
+    padding: 0.12rem 0;
+    border: 0;
+    color: var(--internal-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+}
+
+.cocktail-page .cocktail-highlights a:hover {
+    border-bottom-color: var(--internal-divider);
+    color: var(--internal-text);
+}
+
+.cocktail-page .viewlogo {
+    padding: clamp(2.8rem, 8.5vw, 5.2rem) 0 clamp(1.5rem, 4.2vw, 2.7rem);
+}
+
+.cocktail-page .navbar {
+    margin-top: clamp(0.4rem, 1.4vw, 0.9rem);
+}
+
+.cocktail-page .navbar .nav {
+    width: min(1160px, 96vw);
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.1rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.cocktail-page .navbar .nav div a {
+    min-height: 32px;
+    padding: 0.3rem 0;
+    line-height: 1.2;
+}
+
+.cocktail-page .main {
+    display: grid;
+    gap: 2.05rem;
+    padding-top: clamp(1.4rem, 4.2vw, 2.5rem);
+}
+
+.cocktail-page .section-anchor {
+    position: relative;
+    top: -110px;
+}
+
+.cocktail-page .main .menu-content {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+}
+
+.cocktail-page .main .menu-content .title {
+    margin-bottom: 0.65rem;
+    gap: 0.65rem;
+}
+
+.cocktail-page .main .menu-content .title .item-subtitle {
+    max-width: 76ch;
+    margin: 0;
+    line-height: 1.62;
+}
+
+.cocktail-page .main .menu-content .objects {
+    margin-top: 0.85rem;
+}
+
+.cocktail-page .main .menu-content .objects .item {
+    border-radius: 0;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    padding-block: 1.28rem;
+    gap: 0.6rem;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item {
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .title-item {
+    font-weight: 560;
+    line-height: 1.25;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider {
+    border-bottom: 1px solid var(--internal-divider);
+    padding-top: 1rem;
+    padding-bottom: 0.55rem;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .header-item {
+    justify-content: flex-start;
+}
+
+.cocktail-page .main .menu-content .objects .item.category-divider .title-item {
+    max-width: 100%;
+    font-size: clamp(1.1rem, 3.1vw, 1.55rem) !important;
+    letter-spacing: 0.06em;
+    color: var(--internal-accent);
+    text-align: left;
+}
+
+.cocktail-page .main .menu-content .objects .item .header-item .specific-item {
+    font-size: 0.85rem;
+    color: var(--internal-muted);
+    font-weight: 600;
+    min-width: 4.2ch;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item {
+    color: var(--internal-muted);
+    line-height: 1.62;
+    max-width: 78ch;
+}
+
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    color: var(--internal-text);
+    text-decoration-line: underline;
+    text-decoration-color: rgba(210, 179, 132, 0.72);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
+    text-decoration-skip-ink: auto;
+    transition: color 160ms ease, text-decoration-color 180ms ease;
+    cursor: pointer;
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:hover {
+    color: #fff8ec;
+    text-decoration-color: rgba(210, 179, 132, 0.98);
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:focus-visible {
+    outline: 1px solid rgba(210, 179, 132, 0.92);
+    outline-offset: 2px;
+    border-radius: 1px;
+    text-decoration-color: rgba(210, 179, 132, 1);
+}
+
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:active {
+    transform: translateY(0.5px);
+}
+
+.easter-egg-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.easter-egg-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.easter-egg-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 7, 9, 0.9);
+}
+
+.easter-egg-modal__panel {
+    position: relative;
+    width: min(90vw, 820px);
+    max-height: 84vh;
+    display: grid;
+    gap: 0.6rem;
+    z-index: 1;
+}
+
+.easter-egg-modal__close {
+    justify-self: end;
+    border: 0;
+    background: transparent;
+    color: var(--internal-muted);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.easter-egg-modal__close:hover,
+.easter-egg-modal__close:focus-visible {
+    color: var(--internal-text);
+}
+
+.easter-egg-modal__image {
+    width: 100%;
+    max-height: calc(84vh - 3rem);
+    object-fit: contain;
+    border: 1px solid var(--internal-divider-soft);
+}
+
+.cocktail-page .featured-block .objects span {
+    margin-top: 0.25rem;
+    display: inline-flex;
+    font-size: 0.78rem;
+    color: var(--internal-subtle);
+    letter-spacing: 0.07em;
+}
+
+.signature-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.4rem;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    color: var(--internal-accent);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .cocktail-page .section-anchor {
+        top: -92px;
+    }
+
+    .cocktail-page .viewlogo {
+        padding: clamp(2.2rem, 8vw, 3.2rem) 0 clamp(1.2rem, 4vw, 1.9rem);
+    }
+
+    .cocktail-page .navbar .nav {
+        justify-content: flex-start;
+        gap: 0.45rem 0.9rem;
+        padding: 0.55rem 0.6rem;
+    }
+
+    .cocktail-page .main {
+        gap: 1.45rem;
+        padding-top: 1rem;
+    }
+
+    .cocktail-page .main .menu-content .title {
+        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .cocktail-page .main .menu-content .objects {
+        margin-top: 0.6rem;
+    }
+
+    .cocktail-page .main .menu-content .objects .item {
+        padding-block: 1.05rem;
+        gap: 0.5rem;
+    }
+
+    .cocktail-page .main .menu-content .objects .item .header-item {
+        gap: 0.55rem;
+    }
+
+    .cocktail-page .cocktail-highlights {
+        gap: 0.55rem;
+    }
+
+    .cocktail-page .cocktail-highlights a {
+        font-size: 0.66rem;
+    }
+}
+
+body.modal-open { overflow: hidden; }
+
+/* Altrove TIKI spotlight */
+.cocktail-page .altrove-section {
+    position: relative;
+    padding: clamp(1.2rem, 2.8vw, 1.8rem);
+    border: 1px solid rgba(195, 141, 78, 0.42);
+    background:
+      linear-gradient(180deg, rgba(37, 23, 14, 0.92), rgba(18, 14, 11, 0.94)),
+      repeating-linear-gradient(90deg, rgba(255, 218, 169, 0.06) 0 2px, transparent 2px 18px);
+    box-shadow: inset 0 0 0 1px rgba(255, 214, 158, 0.08);
+}
+
+.cocktail-page .altrove-title .item-title {
+    color: #ffd792;
+    text-shadow: 0 0 18px rgba(255, 193, 107, 0.18);
+    letter-spacing: 0.08em;
+}
+
+.cocktail-page .altrove-title .item-subtitle {
+    color: #e8c69a;
+}
+
+.cocktail-page .altrove-objects {
+    border-top-color: rgba(255, 201, 128, 0.42);
+}
+
+.cocktail-page .altrove-objects .item {
+    border-bottom: 1px dashed rgba(255, 203, 138, 0.35);
+    padding-block: 1.1rem;
+}
+
+.cocktail-page .altrove-objects .item .title-item {
+    color: #ffe7bf;
+    letter-spacing: 0.03em;
+}
+
+.cocktail-page .altrove-objects .item .specific-item {
+    color: #ffd086;
+    font-size: 0.92rem;
+}
+
+.cocktail-page .altrove-objects .item .info-item {
+    color: rgba(246, 224, 191, 0.9);
+}
+
+.cocktail-page .altrove-objects .item--mocktail {
+    background: linear-gradient(90deg, rgba(186, 123, 67, 0.14), rgba(186, 123, 67, 0.02));
+    border-left: 2px solid rgba(255, 193, 112, 0.65);
+    padding-inline: 0.75rem;
+}
+
+.cocktail-page .mocktail-badge {
+    display: inline-block;
+    margin-left: 0.55rem;
+    padding: 0.12rem 0.45rem;
+    border: 1px solid rgba(255, 211, 146, 0.55);
+    color: #ffdca7;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+/* Altrove full tiki redesign */
+.cocktail-page .altrove-section {
+  position: relative;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 172, 88, 0.45);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 165, 79, 0.24), transparent 42%),
+    radial-gradient(circle at 86% 8%, rgba(109, 179, 111, 0.16), transparent 35%),
+    linear-gradient(160deg, rgba(47, 26, 16, 0.95), rgba(22, 13, 10, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(255, 216, 168, 0.1), 0 16px 38px rgba(0, 0, 0, 0.38);
+}
+
+.cocktail-page .altrove-section::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(255, 206, 142, 0.26);
+  pointer-events: none;
+}
+
+.cocktail-page .altrove-title-panel {
+  position: relative;
+  padding: 1rem 1.1rem 1.05rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 188, 112, 0.4);
+  background: linear-gradient(92deg, rgba(77, 42, 22, 0.62), rgba(45, 29, 20, 0.5));
+}
+
+.cocktail-page .altrove-kicker {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.63rem;
+  color: #f6c680;
+}
+
+.cocktail-page .altrove-title-panel .item-title {
+  color: #ffd88e;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  letter-spacing: 0.09em;
+  text-shadow: 0 0 24px rgba(255, 183, 88, 0.28);
+}
+
+.cocktail-page .altrove-title-panel .item-subtitle { color: #f1d8b1; }
+
+.cocktail-page .altrove-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  border-top: 0;
+}
+
+.cocktail-page .altrove-drink-card {
+  padding: 0.95rem 0.95rem 0.85rem;
+  border: 1px solid rgba(255, 199, 135, 0.28);
+  background: linear-gradient(180deg, rgba(50, 29, 20, 0.72), rgba(35, 22, 16, 0.72));
+  box-shadow: inset 0 0 0 1px rgba(255, 229, 193, 0.06);
+}
+
+.cocktail-page .altrove-card-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+  padding-bottom: 0.42rem;
+  border-bottom: 1px dashed rgba(255, 207, 147, 0.34);
+}
+
+.cocktail-page .altrove-style-note {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e9c08a;
+}
+
+.cocktail-page .altrove-drink-card .title-item { color: #fff0d4; }
+.cocktail-page .altrove-drink-card .specific-item { color: #ffc87a; }
+.cocktail-page .altrove-story { color: #f5dfbd; }
+.cocktail-page .altrove-ingredients { color: #e9c793; font-size: 0.86rem; }
+.cocktail-page .altrove-finish {
+  color: #f9e7cd;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cocktail-page .altrove-drink-card.item--mocktail {
+  border-color: rgba(190, 235, 160, 0.45);
+  background:
+    linear-gradient(180deg, rgba(50, 45, 26, 0.72), rgba(34, 31, 19, 0.74)),
+    radial-gradient(circle at 84% 22%, rgba(147, 223, 155, 0.14), transparent 46%);
+}
+
+.cocktail-page .altrove-drink-card .mocktail-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.08rem 0.4rem;
+  border: 1px solid rgba(195, 236, 167, 0.64);
+  color: #d6f5bd;
+  font-size: 0.57rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(118, 166, 86, 0.22);
+}
+
+@media (max-width: 900px) {
+  .cocktail-page .altrove-grid { grid-template-columns: 1fr; }
+}
+
+/* Altrove correction: vertical narrative tiki list */
+.cocktail-page .altrove-section {
+  padding: clamp(1.5rem, 3.2vw, 2.3rem);
+  border: 1px solid rgba(214, 157, 95, 0.38);
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255, 171, 88, 0.2), transparent 38%),
+    linear-gradient(170deg, rgba(52, 30, 20, 0.94), rgba(22, 14, 11, 0.96));
+}
+
+.cocktail-page .altrove-section::before {
+  inset: 14px;
+  border-style: solid;
+  border-color: rgba(255, 211, 154, 0.12);
+}
+
+.cocktail-page .altrove-title-panel {
+  border: 0;
+  border-left: 2px solid rgba(255, 193, 122, 0.55);
+  background: linear-gradient(90deg, rgba(94, 56, 29, 0.45), rgba(94, 56, 29, 0));
+  padding: 0.7rem 0.9rem;
+}
+
+.cocktail-page .altrove-title-panel .item-title { font-size: clamp(2rem, 5.5vw, 3.2rem); }
+
+.cocktail-page .altrove-list {
+  display: block;
+  border-top: 1px solid rgba(255, 197, 128, 0.24);
+  margin-top: 0.9rem;
+}
+
+.cocktail-page .altrove-drink {
+  position: relative;
+  padding: 1rem 0.2rem 0.95rem;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 207, 147, 0.3);
+  background: transparent;
+  box-shadow: none;
+}
+
+.cocktail-page .altrove-drink .header-item {
+  align-items: flex-start;
+  padding-right: 3.1rem;
+}
+
+.cocktail-page .altrove-drink .specific-item {
+  position: absolute;
+  top: 1.02rem;
+  right: 0.2rem;
+  min-width: auto;
+  color: #ffd08d;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+}
+
+.cocktail-page .altrove-drink .title-item {
+  color: #fff0d4;
+  font-size: clamp(1.02rem, 2.1vw, 1.18rem);
+}
+
+.cocktail-page .altrove-story { color: #f2dcc0; margin-top: 0.32rem; }
+.cocktail-page .altrove-ingredients {
+  color: #e6c08b;
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
+}
+.cocktail-page .altrove-finish {
+  margin-top: 0.2rem;
+  color: #f7e9d1;
+  font-size: 0.81rem;
+  text-transform: none;
+  font-style: italic;
+}
+
+.cocktail-page .altrove-drink.item--mocktail {
+  background: linear-gradient(90deg, rgba(131, 175, 98, 0.14), transparent 55%);
+}
+
+.cocktail-page .altrove-drink .mocktail-badge {
+  border: 0;
+  border-bottom: 1px solid rgba(196, 235, 168, 0.8);
+  padding: 0 0.05rem;
+  background: transparent;
+  color: #d6f5bd;
+  letter-spacing: 0.13em;
+}
+
+.cocktail-page .altrove-card-topline,
+.cocktail-page .altrove-style-note { display: none; }
+
+/* Altrove immersive tiki pass */
+.cocktail-page .altrove-section {
+  position: relative;
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+  border: 1px solid rgba(201, 140, 74, 0.42);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(108, 156, 84, 0.2), transparent 34%),
+    radial-gradient(circle at 14% 22%, rgba(197, 73, 43, 0.19), transparent 45%),
+    repeating-linear-gradient(90deg, rgba(255, 213, 151, 0.05) 0 2px, transparent 2px 15px),
+    linear-gradient(170deg, rgba(63, 34, 20, 0.96), rgba(23, 15, 12, 0.97));
+  box-shadow: inset 0 0 0 1px rgba(255, 220, 170, 0.09), 0 28px 45px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.cocktail-page .altrove-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 100%, rgba(93, 158, 85, 0.18), transparent 45%);
+  pointer-events: none;
+}
+
+.cocktail-page .altrove-title-panel {
+  position: relative;
+  padding: 1rem 1.15rem 1.2rem;
+  border: 1px solid rgba(237, 177, 114, 0.45);
+  border-radius: 2px;
+  background:
+    linear-gradient(96deg, rgba(104, 61, 32, 0.62), rgba(70, 45, 30, 0.22)),
+    repeating-linear-gradient(0deg, rgba(255, 223, 186, 0.05) 0 2px, transparent 2px 9px);
+}
+
+.cocktail-page .altrove-title-ornament {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  width: 64px;
+  height: 24px;
+  background: linear-gradient(120deg, rgba(249, 193, 123, 0.8), rgba(116, 161, 86, 0.7));
+  clip-path: polygon(0 100%, 10% 24%, 24% 100%, 36% 26%, 49% 100%, 62% 28%, 77% 100%, 89% 30%, 100% 100%);
+  opacity: 0.72;
+}
+
+.cocktail-page .altrove-kicker {
+  font-size: 0.61rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f2c382;
+}
+
+.cocktail-page .altrove-title-panel .item-title {
+  color: #ffd996;
+  font-size: clamp(2.05rem, 6vw, 3.5rem);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 26px rgba(255, 173, 88, 0.34);
+}
+
+.cocktail-page .altrove-title-panel .item-subtitle { color: #f3dcb9; }
+
+.cocktail-page .altrove-list {
+  display: block;
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(255, 199, 129, 0.35);
+}
+
+.cocktail-page .altrove-drink {
+  position: relative;
+  padding: 1rem 0.2rem 1.05rem;
+  border: 0;
+  border-bottom: 1px dashed rgba(255, 208, 145, 0.46);
+  background: linear-gradient(90deg, rgba(140, 86, 42, 0.12), transparent 68%);
+}
+
+.cocktail-page .altrove-drink::before {
+  content: "✦";
+  position: absolute;
+  left: -0.2rem;
+  top: 1.1rem;
+  color: rgba(255, 196, 122, 0.7);
+  font-size: 0.7rem;
+}
+
+.cocktail-page .altrove-drink-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.15rem;
+}
+
+.cocktail-page .altrove-microtag {
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #eabf87;
+}
+
+.cocktail-page .altrove-drink .specific-item {
+  color: #ffd38f;
+  font-size: 0.87rem;
+  letter-spacing: 0.06em;
+}
+
+.cocktail-page .altrove-drink .header-item .title-item {
+  color: #fff0d4;
+  font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+  letter-spacing: 0.02em;
+}
+
+.cocktail-page .altrove-story { color: #f3dcc0; }
+.cocktail-page .altrove-ingredients { color: #e9c593; font-size: 0.88rem; }
+.cocktail-page .altrove-finish { color: #ffe7c4; font-size: 0.83rem; font-style: italic; }
+
+.cocktail-page .altrove-drink.item--mocktail {
+  background:
+    linear-gradient(90deg, rgba(111, 155, 89, 0.2), rgba(111, 155, 89, 0) 60%),
+    linear-gradient(90deg, rgba(174, 118, 59, 0.13), transparent 78%);
+}
+
+.cocktail-page .altrove-drink .mocktail-badge {
+  border: 1px solid rgba(200, 236, 160, 0.64);
+  padding: 0.05rem 0.4rem;
+  color: #daf7be;
+  background: rgba(96, 132, 71, 0.32);
+  letter-spacing: 0.14em;
+  font-size: 0.55rem;
+}
