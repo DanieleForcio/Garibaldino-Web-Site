@@ -1085,3 +1085,68 @@ body.modal-open { overflow: hidden; }
   margin-left:.45rem; border:1px solid rgba(198,234,168,.75); background:rgba(95,131,71,.35); color:#ddf4c5;
   font-size:.54rem; letter-spacing:.14em; padding:.04rem .34rem;
 }
+
+/* Altrove final direction: photo-led header + editorial list */
+.cocktail-page .altrove-sanctum {
+  background: linear-gradient(180deg, #1a1412 0%, #120f0d 100%);
+  box-shadow: none;
+}
+.cocktail-page .altrove-sanctum::before { display:none; }
+
+.cocktail-page .altrove-sanctum__header {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border: 0;
+  background-image:
+    linear-gradient(100deg, rgba(23, 16, 12, 0.82), rgba(23, 16, 12, 0.45) 45%, rgba(23, 16, 12, 0.72) 100%),
+    url("../images/Immagine\ WhatsApp\ 2025-07-07\ ore\ 13.16.56_70538235.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.cocktail-page .altrove-sanctum__header::before,
+.cocktail-page .altrove-sanctum__header::after { display:none; }
+
+.cocktail-page .altrove-sanctum__title {
+  text-shadow: none;
+  letter-spacing: 0.1em;
+}
+
+.cocktail-page .altrove-sanctum__list {
+  margin-top: 1rem;
+  gap: 0;
+}
+
+.cocktail-page .altrove-drinkline {
+  background: transparent;
+  border-left: 0;
+  padding: 1rem 0.2rem 0.9rem;
+}
+.cocktail-page .altrove-drinkline::before { display:none; }
+.cocktail-page .altrove-drinkline::after {
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(235, 197, 139, 0.25);
+}
+
+.cocktail-page .altrove-drinkline__head span {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 0.82rem;
+}
+
+.cocktail-page .altrove-drinkline__head h3 {
+  font-size: clamp(1.2rem, 2.6vw, 1.52rem);
+}
+
+.cocktail-page .altrove-drinkline__mood { color: #dcb17f; }
+.cocktail-page .altrove-drinkline__story { color: #efddc4; }
+.cocktail-page .altrove-drinkline__ingredients { color: #debc8f; }
+.cocktail-page .altrove-drinkline__finish { color: #f6e4cc; }
+
+.cocktail-page .altrove-drinkline--mocktail { background: transparent; }
+.cocktail-page .altrove-drinkline .mocktail-badge {
+  background: transparent;
+  border: 1px solid rgba(191, 225, 159, 0.75);
+}
