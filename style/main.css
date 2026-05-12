@@ -59,21 +59,21 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    min-height: 66px;
+    min-height: 72px;
     z-index: 40;
     background: rgba(7, 8, 10, 0.96);
-    border-bottom: 1px solid var(--internal-divider);
+    border-bottom: 1px solid var(--internal-divider-soft);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    gap: 1rem;
+    padding: 0.45rem 4vw;
 }
 
 .header a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
     height: 36px;
     border-radius: 0;
     border: 1px solid transparent;
@@ -98,8 +98,19 @@ body {
     border-color: var(--internal-divider);
 }
 
+.header .garibaldino,
+.header .garibaldino:hover,
+.header .garibaldino:focus-visible {
+    border-color: transparent;
+    color: inherit;
+    transform: none;
+    filter: none;
+    text-decoration: none;
+}
+
 .header .garibaldino {
-    flex: 1;
+    flex: 0 1 min(280px, 55vw);
+    width: min(280px, 55vw);
     height: 38px;
     margin-left: 0;
     background-image: url(../images/scrittagaribaldino.png);
@@ -111,15 +122,23 @@ body {
 .header__actions {
     display: inline-flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+.header__actions .button {
+    min-height: 42px;
+    padding: 0.62rem 0.9rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 
 .menu-trigger {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.42rem;
     min-height: 42px;
-    padding: 0.66rem 0.9rem;
+    padding: 0.62rem 0.82rem;
     border: 1px solid transparent;
     border-radius: 0;
     background: transparent;
@@ -127,12 +146,21 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-size: 0.74rem;
+    white-space: nowrap;
     cursor: pointer;
 }
 
 .menu-trigger:hover {
     color: var(--internal-text);
     border-color: var(--internal-divider);
+}
+
+.menu-trigger:focus-visible {
+    border-color: var(--internal-accent);
+}
+
+.menu-trigger__label {
+    line-height: 1;
 }
 
 .menu-trigger__icon {
