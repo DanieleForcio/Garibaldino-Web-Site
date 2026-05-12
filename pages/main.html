@@ -13,15 +13,30 @@
 <body class="background-body cucina-page">
 
   <div class="header">
-      <!-- <div class="back">
-          <a href="../index.html">
-              <img src="../images/back-white.png" class="back" alt="">
-          </a>
-      </div>-->
-      <a href="../index.html" class="header-back">
-        <img src="../images/back-white.png" alt="Torna alla home">
-      </a>
-      <div class="garibaldino"></div>
+      <a href="../index.html" class="garibaldino" aria-label="Garibaldino home"></a>
+      <div class="header__actions">
+          <a class="button" href="ContattiPrenotazioni.html#prenota">Prenota ora</a>
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="site-menu-overlay">
+              Menu
+              <span class="menu-trigger__icon" aria-hidden="true"></span>
+          </button>
+      </div>
+  </div>
+
+  <div class="menu-overlay" id="site-menu-overlay" aria-hidden="true">
+      <div class="menu-overlay__inner">
+          <button class="menu-overlay__close" type="button" aria-label="Chiudi menu">
+              <span aria-hidden="true">×</span>
+              <span class="sr-only">Chiudi menu</span>
+          </button>
+          <nav class="menu-overlay__nav" aria-label="Navigazione principale">
+              <a href="../index.html">Home</a>
+              <a href="main.html">Cucina</a>
+              <a href="Cocktailbar.html">Cocktail Bar</a>
+              <a href="Enoteca.html">Enoteca</a>
+              <a href="ContattiPrenotazioni.html">Contatti & Prenotazioni</a>
+          </nav>
+      </div>
   </div>
 
     <div class="viewlogo">
@@ -534,6 +549,7 @@
 
 
 
+<script src="../scripts/home.js"></script>
 </body>
 
 </html>
