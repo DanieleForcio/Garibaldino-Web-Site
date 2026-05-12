@@ -196,7 +196,7 @@
                         <div class="separator"></div>
                         <div class="specific-item">9</div>
                     </div>
-                    <div class="info-item">"Così la tua vita non diventa come <a href="https://www.youtube.com/watch?v=xGWFa6k-LlY" class="mocktail-inline-link">Beautiful</a>"</div>
+                    <div class="info-item">"Così la tua vita non diventa come <button type="button" class="mocktail-inline-link easter-egg-trigger" data-easter-egg="audio" data-audio-src="../audio/easter-eggs/beautiful.mp3" aria-pressed="false">Beautiful</button>"</div>
 
                     <div class="info-item">Passion fruit soda • Lime</div>
                     <div class="info-item">Fresco, leggero, dissetante.</div>
@@ -207,10 +207,10 @@
                         <div class="separator"></div>
                         <div class="specific-item">9</div>
                     </div>
-                    <div class="info-item">"Non sappiamo cosa abbiamo partorito...  <br> Però viva le <a href="https://upload.wikimedia.org/wikipedia/it/4/48/Alba_del_pianeta_delle_scimmie.jpg" class="mocktail-inline-link">scimmie!!</a>"</div>
+                    <div class="info-item">"Non sappiamo cosa abbiamo partorito...  <br> Però viva le <button type="button" class="mocktail-inline-link easter-egg-trigger" data-easter-egg="image" data-image-src="../images/easter-eggs/scimmie.jpg" aria-haspopup="dialog" aria-controls="easter-egg-modal">scimmie!!</button>"</div>
 
                     <div class="info-item">Mango • Lime • Orzata</div>
-                    <div class="info-item">Più pieno, più tropicale, <a href="https://www.youtube.com/watch?v=_bmcwEK4a1A" class="mocktail-inline-link">più uh uh ah ah!.</a></div>
+                    <div class="info-item">Più pieno, più tropicale, <button type="button" class="mocktail-inline-link easter-egg-trigger" data-easter-egg="audio" data-audio-src="../audio/easter-eggs/uh-uh-ah-ah.mp3" aria-pressed="false">più uh uh ah ah!.</button></div>
                 </div>
             </div>
         </div>
@@ -771,9 +771,16 @@
 
 
 
-
+    <div id="easter-egg-modal" class="easter-egg-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Easter egg scimmie">
+        <div class="easter-egg-modal__backdrop" data-modal-close></div>
+        <div class="easter-egg-modal__panel">
+            <button type="button" class="easter-egg-modal__close" data-modal-close aria-label="Chiudi easter egg">×</button>
+            <img src="" alt="" class="easter-egg-modal__image" id="easter-egg-image">
+        </div>
+    </div>
 
 <script src="../scripts/home.js"></script>
+<script src="../scripts/cocktail-easter-eggs.js"></script>
 </body>
 
 </html>

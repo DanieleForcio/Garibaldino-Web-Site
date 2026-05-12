@@ -146,6 +146,11 @@
 
 
 .cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
     color: var(--internal-text);
     text-decoration-line: underline;
     text-decoration-color: rgba(210, 179, 132, 0.72);
@@ -166,6 +171,64 @@
     outline-offset: 2px;
     border-radius: 1px;
     text-decoration-color: rgba(210, 179, 132, 1);
+}
+
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:active {
+    transform: translateY(0.5px);
+}
+
+.easter-egg-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.easter-egg-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.easter-egg-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 7, 9, 0.9);
+}
+
+.easter-egg-modal__panel {
+    position: relative;
+    width: min(90vw, 820px);
+    max-height: 84vh;
+    display: grid;
+    gap: 0.6rem;
+    z-index: 1;
+}
+
+.easter-egg-modal__close {
+    justify-self: end;
+    border: 0;
+    background: transparent;
+    color: var(--internal-muted);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.easter-egg-modal__close:hover,
+.easter-egg-modal__close:focus-visible {
+    color: var(--internal-text);
+}
+
+.easter-egg-modal__image {
+    width: 100%;
+    max-height: calc(84vh - 3rem);
+    object-fit: contain;
+    border: 1px solid var(--internal-divider-soft);
 }
 
 .cocktail-page .featured-block .objects span {
@@ -237,3 +300,5 @@
         font-size: 0.66rem;
     }
 }
+
+body.modal-open { overflow: hidden; }
