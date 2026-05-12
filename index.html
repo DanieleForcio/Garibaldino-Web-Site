@@ -1,83 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/foundation.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Garibaldino | Spizzico Urbano | Clhub </title>
+    <title>Garibaldino | Spizzico Urbano | Club</title>
 </head>
 
 <body>
-    
-    <div class="main">
-        <div class="logo" style="margin-top: 40px">
-            <div class="content">
-                <img src="images/logo_1.jpg" alt="">
+    <header class="home-header">
+        <div class="container home-header__inner">
+            <a class="home-brand" href="index.html" aria-label="Garibaldino home">
+                <img src="images/scrittagaribaldino.png" alt="Garibaldino">
+            </a>
+            <div class="home-header__actions">
+                <a class="button" href="#prenota">Prenota ora</a>
+                <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="site-menu-overlay">
+                    Menu
+                    <span class="menu-trigger__icon" aria-hidden="true"></span>
+                </button>
             </div>
-            
+        </div>
+    </header>
 
-            <div class="interaction" style="margin-top: 30px">
-               
-                <a href="pages/Cocktailbar.html">
-                    <input class="capitalize" type="button" value="COCKTAIL BAR">
-                </a>
-               
-                <a href="pages/main.html">
-                    <input class="capitalize" type="button" value="CUCINA">
-                </a>
-                <a href="pages/Enoteca.html">
-                    <input class="capitalize" type="button" value="ENOTECA">
-                </a>
-               
-            </div>
-
+    <div class="menu-overlay" id="site-menu-overlay" aria-hidden="true">
+        <div class="menu-overlay__inner container">
+            <button class="menu-overlay__close" type="button" aria-label="Chiudi menu">
+                <span aria-hidden="true">×</span>
+                <span class="sr-only">Chiudi menu</span>
+            </button>
+            <nav class="menu-overlay__nav" aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="pages/main.html">Cucina</a>
+                <a href="pages/Cocktailbar.html">Cocktail Bar</a>
+                <a href="pages/Enoteca.html">Enoteca</a>
+                <a href="pages/ContattiPrenotazioni.html">Contatti & Prenotazioni</a>
+            </nav>
         </div>
     </div>
 
-    <div class="footer" >
-        <div class="info">
-            <span style="margin-top: 80px">
-                Wifi: GaribaldinoWifi
-            </span>
-            <span style="margin-bottom: 40px">
-                Password: SOLOSEMIOFFRIUNCICCHETTO
-            </span>
-            <span>
-              Info & Prenotazioni
-            </span>
-            <span >
-                  <a href="mailto:garibaldino.sassuolo@gmail.com">garibaldino.sassuolo@gmail.com </a>
-            </span >
-            <span>
-              📞
-                <a href="tel:+0536883568">0536 883568</a>
+    <main>
+        <section class="hero section">
+            <div class="hero__media" aria-hidden="true"></div>
+            <div class="container hero__content">
+                    <p class="eyebrow">SASSUOLO · OSPITALITÀ CONTEMPORANEA</p>
+                    <h1>Cucina, cocktail ed enoteca.<br>Un unico luogo, tre anime.</h1>
+                    <p class="hero__lead">
+                        Dal drink alla cena, Garibaldino unisce convivialità, energia urbana e cura del dettaglio.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="button" href="#esperienze">SCOPRI LE ESPERIENZE</a>
+                    </div>
+            </div>
+        </section>
 
-            </span>
+        <section class="section story" id="story">
+            <div class="container story__inner">
+                <div class="story__text">
+                    <p class="eyebrow">Identità Garibaldino</p>
+                    <h2>Spizzico urbano con anima di quartiere.</h2>
+                    <p>
+                        Qui trovi la spontaneità del locale di fiducia e la cura di una proposta costruita con carattere:
+                        piatti sfiziosi, drink ben eseguiti, selezione vini pensata per accompagnare ogni tavolo.
+                    </p>
+                    <p>
+                        Garibaldino non è solo una lista di prodotti: è un'atmosfera fatta di musica, persone e dettagli,
+                        da vivere con leggerezza ma senza compromessi sulla qualità.
+                    </p>
+                </div>
+                <div class="story__visual">
+                    <div class="story-carousel" aria-label="Galleria fotografica Garibaldino">
+                        <div class="story-carousel__track">
+                            <figure class="story-carousel__slide slide-bar is-active">
+                                <img src="images/garibaldino.jpg" alt="Bancone del Garibaldino illuminato">
+                            </figure>
+                            <figure class="story-carousel__slide slide-bottles">
+                                <img src="images/Immagine WhatsApp 2025-07-07 ore 13.16.56_70538235.jpg" alt="Dettaglio bottiglie e atmosfera serale del locale">
+                            </figure>
+                            <figure class="story-carousel__slide slide-counter">
+                                <img src="images/garibaldino.jpg" alt="Dettagli del bancone e luci del locale">
+                            </figure>
+                        </div>
+                        <div class="story-carousel__controls">
+                            <button class="story-carousel__btn" type="button" data-dir="-1" aria-label="Foto precedente">←</button>
+                            <div class="story-carousel__dots" aria-hidden="true">
+                                <span class="story-carousel__dot is-active"></span>
+                                <span class="story-carousel__dot"></span>
+                                <span class="story-carousel__dot"></span>
+                            </div>
+                            <button class="story-carousel__btn" type="button" data-dir="1" aria-label="Foto successiva">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experiences" id="esperienze">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Le tre anime</p>
+                    <h2>Scegli il tuo percorso.</h2>
+                    <p class="section-subtitle">Resta per l’esperienza completa.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Cucina</p>
+                        <h3>Comfort urbano, gusto diretto.</h3>
+                        <p>Taglieri, burger, fritti e proposte da condividere in una cucina conviviale e immediata.</p>
+                        <a class="button-secondary" href="pages/main.html">Vai alla cucina</a>
+                    </article>
+
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Cocktail Bar</p>
+                        <h3>Classici, signature, aperitivo.</h3>
+                        <p>Dal pre-serata ai grandi classici: equilibrio e ritmo in una drink list essenziale.</p>
+                        <a class="button-secondary" href="pages/Cocktailbar.html">Vai al cocktail bar</a>
+                    </article>
+
+                    <article class="experience-card">
+                        <p class="experience-card__kicker">Enoteca</p>
+                        <h3>Etichette italiane e bollicine.</h3>
+                        <p>Una carta vini selezionata per accompagnare la serata, dal calice alla bottiglia speciale.</p>
+                        <a class="button-secondary" href="pages/Enoteca.html">Vai all'enoteca</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reservation" id="prenota">
+            <div class="container reservation__inner">
+                <div class="reservation__content">
+                    <p class="eyebrow">Prenotazioni</p>
+                    <h2>Prenota il tuo tavolo e vivi Garibaldino al tuo ritmo.</h2>
+                    <p>Per gruppi, serate speciali o semplicemente per assicurarti il posto migliore.</p>
+                </div>
+                <div class="reservation__actions">
+                    <a class="button" href="tel:+0536883568">Chiama: 0536 883568</a>
+                    <a class="button-secondary" href="mailto:garibaldino.sassuolo@gmail.com">Scrivi una mail</a>
+                    <a class="button-secondary" href="https://wa.me/393668787648" target="_blank" rel="noopener noreferrer">WHATSAPP: +39 366 8787648</a>
+                    <a class="button-secondary" href="pages/ContattiPrenotazioni.html">Contatti completi</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer site-footer">
+        <div class="container info">
+            <span class="eyebrow">Wifi: GaribaldinoWifi</span>
+            <span>Password: SOLOSEMIOFFRIUNCICCHETTO</span>
+            <span>Info & Prenotazioni</span>
+            <span><a href="mailto:garibaldino.sassuolo@gmail.com">garibaldino.sassuolo@gmail.com</a></span>
+            <span>📞 <a href="tel:+0536883568">0536 883568</a></span>
             <span>
-              <script type="text/javascript">
-                  window.onload = function(){
-                  (function(d, script) {
-                  script = d.createElement('script');
-                  script.type = 'text/javascript';
-                  script.async = true;
-                  script.src = 'https://w.app/widget-v1/8GNFs3.js';
-                  d.getElementsByTagName('head')[0].appendChild(script);
-                  }(document));
-                  };
-              </script>
+                <script type="text/javascript">
+                    window.onload = function () {
+                        (function (d, script) {
+                            script = d.createElement('script');
+                            script.type = 'text/javascript';
+                            script.async = true;
+                            script.src = 'https://w.app/widget-v1/8GNFs3.js';
+                            d.getElementsByTagName('head')[0].appendChild(script);
+                        }(document));
+                    };
+                </script>
             </span>
-
-
         </div>
-    </div>
-
-
-    
-
+    </footer>
 </body>
+<script src="scripts/home.js"></script>
 
 </html>
