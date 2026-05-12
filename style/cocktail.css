@@ -144,6 +144,30 @@
     max-width: 78ch;
 }
 
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link {
+    color: var(--internal-text);
+    text-decoration-line: underline;
+    text-decoration-color: rgba(210, 179, 132, 0.72);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
+    text-decoration-skip-ink: auto;
+    transition: color 160ms ease, text-decoration-color 180ms ease;
+    cursor: pointer;
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:hover {
+    color: #fff8ec;
+    text-decoration-color: rgba(210, 179, 132, 0.98);
+}
+
+.cocktail-page .main .menu-content .objects .item .info-item .mocktail-inline-link:focus-visible {
+    outline: 1px solid rgba(210, 179, 132, 0.92);
+    outline-offset: 2px;
+    border-radius: 1px;
+    text-decoration-color: rgba(210, 179, 132, 1);
+}
+
 .cocktail-page .featured-block .objects span {
     margin-top: 0.25rem;
     display: inline-flex;
