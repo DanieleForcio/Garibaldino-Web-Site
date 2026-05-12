@@ -302,3 +302,65 @@
 }
 
 body.modal-open { overflow: hidden; }
+
+/* Altrove TIKI spotlight */
+.cocktail-page .altrove-section {
+    position: relative;
+    padding: clamp(1.2rem, 2.8vw, 1.8rem);
+    border: 1px solid rgba(195, 141, 78, 0.42);
+    background:
+      linear-gradient(180deg, rgba(37, 23, 14, 0.92), rgba(18, 14, 11, 0.94)),
+      repeating-linear-gradient(90deg, rgba(255, 218, 169, 0.06) 0 2px, transparent 2px 18px);
+    box-shadow: inset 0 0 0 1px rgba(255, 214, 158, 0.08);
+}
+
+.cocktail-page .altrove-title .item-title {
+    color: #ffd792;
+    text-shadow: 0 0 18px rgba(255, 193, 107, 0.18);
+    letter-spacing: 0.08em;
+}
+
+.cocktail-page .altrove-title .item-subtitle {
+    color: #e8c69a;
+}
+
+.cocktail-page .altrove-objects {
+    border-top-color: rgba(255, 201, 128, 0.42);
+}
+
+.cocktail-page .altrove-objects .item {
+    border-bottom: 1px dashed rgba(255, 203, 138, 0.35);
+    padding-block: 1.1rem;
+}
+
+.cocktail-page .altrove-objects .item .title-item {
+    color: #ffe7bf;
+    letter-spacing: 0.03em;
+}
+
+.cocktail-page .altrove-objects .item .specific-item {
+    color: #ffd086;
+    font-size: 0.92rem;
+}
+
+.cocktail-page .altrove-objects .item .info-item {
+    color: rgba(246, 224, 191, 0.9);
+}
+
+.cocktail-page .altrove-objects .item--mocktail {
+    background: linear-gradient(90deg, rgba(186, 123, 67, 0.14), rgba(186, 123, 67, 0.02));
+    border-left: 2px solid rgba(255, 193, 112, 0.65);
+    padding-inline: 0.75rem;
+}
+
+.cocktail-page .mocktail-badge {
+    display: inline-block;
+    margin-left: 0.55rem;
+    padding: 0.12rem 0.45rem;
+    border: 1px solid rgba(255, 211, 146, 0.55);
+    color: #ffdca7;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
