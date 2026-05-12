@@ -561,3 +561,130 @@ body.modal-open { overflow: hidden; }
 
 .cocktail-page .altrove-card-topline,
 .cocktail-page .altrove-style-note { display: none; }
+
+/* Altrove immersive tiki pass */
+.cocktail-page .altrove-section {
+  position: relative;
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+  border: 1px solid rgba(201, 140, 74, 0.42);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(108, 156, 84, 0.2), transparent 34%),
+    radial-gradient(circle at 14% 22%, rgba(197, 73, 43, 0.19), transparent 45%),
+    repeating-linear-gradient(90deg, rgba(255, 213, 151, 0.05) 0 2px, transparent 2px 15px),
+    linear-gradient(170deg, rgba(63, 34, 20, 0.96), rgba(23, 15, 12, 0.97));
+  box-shadow: inset 0 0 0 1px rgba(255, 220, 170, 0.09), 0 28px 45px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.cocktail-page .altrove-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 100%, rgba(93, 158, 85, 0.18), transparent 45%);
+  pointer-events: none;
+}
+
+.cocktail-page .altrove-title-panel {
+  position: relative;
+  padding: 1rem 1.15rem 1.2rem;
+  border: 1px solid rgba(237, 177, 114, 0.45);
+  border-radius: 2px;
+  background:
+    linear-gradient(96deg, rgba(104, 61, 32, 0.62), rgba(70, 45, 30, 0.22)),
+    repeating-linear-gradient(0deg, rgba(255, 223, 186, 0.05) 0 2px, transparent 2px 9px);
+}
+
+.cocktail-page .altrove-title-ornament {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  width: 64px;
+  height: 24px;
+  background: linear-gradient(120deg, rgba(249, 193, 123, 0.8), rgba(116, 161, 86, 0.7));
+  clip-path: polygon(0 100%, 10% 24%, 24% 100%, 36% 26%, 49% 100%, 62% 28%, 77% 100%, 89% 30%, 100% 100%);
+  opacity: 0.72;
+}
+
+.cocktail-page .altrove-kicker {
+  font-size: 0.61rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f2c382;
+}
+
+.cocktail-page .altrove-title-panel .item-title {
+  color: #ffd996;
+  font-size: clamp(2.05rem, 6vw, 3.5rem);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 26px rgba(255, 173, 88, 0.34);
+}
+
+.cocktail-page .altrove-title-panel .item-subtitle { color: #f3dcb9; }
+
+.cocktail-page .altrove-list {
+  display: block;
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(255, 199, 129, 0.35);
+}
+
+.cocktail-page .altrove-drink {
+  position: relative;
+  padding: 1rem 0.2rem 1.05rem;
+  border: 0;
+  border-bottom: 1px dashed rgba(255, 208, 145, 0.46);
+  background: linear-gradient(90deg, rgba(140, 86, 42, 0.12), transparent 68%);
+}
+
+.cocktail-page .altrove-drink::before {
+  content: "✦";
+  position: absolute;
+  left: -0.2rem;
+  top: 1.1rem;
+  color: rgba(255, 196, 122, 0.7);
+  font-size: 0.7rem;
+}
+
+.cocktail-page .altrove-drink-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.15rem;
+}
+
+.cocktail-page .altrove-microtag {
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #eabf87;
+}
+
+.cocktail-page .altrove-drink .specific-item {
+  color: #ffd38f;
+  font-size: 0.87rem;
+  letter-spacing: 0.06em;
+}
+
+.cocktail-page .altrove-drink .header-item .title-item {
+  color: #fff0d4;
+  font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+  letter-spacing: 0.02em;
+}
+
+.cocktail-page .altrove-story { color: #f3dcc0; }
+.cocktail-page .altrove-ingredients { color: #e9c593; font-size: 0.88rem; }
+.cocktail-page .altrove-finish { color: #ffe7c4; font-size: 0.83rem; font-style: italic; }
+
+.cocktail-page .altrove-drink.item--mocktail {
+  background:
+    linear-gradient(90deg, rgba(111, 155, 89, 0.2), rgba(111, 155, 89, 0) 60%),
+    linear-gradient(90deg, rgba(174, 118, 59, 0.13), transparent 78%);
+}
+
+.cocktail-page .altrove-drink .mocktail-badge {
+  border: 1px solid rgba(200, 236, 160, 0.64);
+  padding: 0.05rem 0.4rem;
+  color: #daf7be;
+  background: rgba(96, 132, 71, 0.32);
+  letter-spacing: 0.14em;
+  font-size: 0.55rem;
+}
