@@ -1,0 +1,166 @@
+.cucina-page .viewlogo .content {
+    display: grid;
+    gap: 1.35rem;
+    justify-items: center;
+}
+
+.cucina-page .cucina-intro {
+    max-width: 74ch;
+    text-align: center;
+    color: var(--internal-muted);
+    font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+    line-height: 1.68;
+}
+
+.cucina-page .cucina-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.2rem;
+}
+
+.cucina-page .cucina-highlights a {
+    padding: 0.12rem 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--internal-muted);
+    border-bottom: 1px solid transparent;
+}
+
+.cucina-page .cucina-highlights a:hover {
+    border-bottom-color: var(--internal-divider);
+    color: var(--internal-text);
+}
+
+.cucina-page .viewlogo {
+    padding: clamp(2.8rem, 8.5vw, 5.2rem) 0 clamp(1.5rem, 4.2vw, 2.7rem);
+}
+
+.cucina-page .navbar {
+    margin-top: clamp(0.4rem, 1.4vw, 0.9rem);
+}
+
+.cucina-page .navbar .nav {
+    width: min(1120px, 94vw);
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.1rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.cucina-page .navbar .nav div a {
+    min-height: 32px;
+    padding: 0.3rem 0;
+    line-height: 1.2;
+}
+
+.cucina-page .main {
+    display: grid;
+    gap: 2.05rem;
+    padding-top: clamp(1.4rem, 4.2vw, 2.5rem);
+}
+
+.cucina-page .section-anchor {
+    position: relative;
+    top: -110px;
+}
+
+.cucina-page .main .menu-content {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+}
+
+.cucina-page .main .menu-content .title {
+    margin-bottom: 0.65rem;
+    gap: 0.65rem;
+}
+
+.cucina-page .main .menu-content .title .item-subtitle {
+    color: var(--internal-muted);
+    max-width: 76ch;
+    margin: 0;
+    line-height: 1.62;
+}
+
+.cucina-page .main .menu-content .objects {
+    margin-top: 0.85rem;
+}
+
+.cucina-page .main .menu-content .objects .item {
+    border-radius: 0;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    padding-block: 1.28rem;
+    gap: 0.6rem;
+}
+
+.cucina-page .main .menu-content .objects .item .header-item {
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.cucina-page .main .menu-content .objects .item .header-item .specific-item {
+    color: var(--internal-muted);
+    font-weight: 600;
+    min-width: 4.2ch;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.cucina-page .main .menu-content .objects .item .info-item {
+    color: var(--internal-muted);
+    line-height: 1.62;
+    max-width: 78ch;
+}
+
+@media (max-width: 900px) {
+    .cucina-page .section-anchor {
+        top: -92px;
+    }
+
+    .cucina-page .viewlogo {
+        padding: clamp(2.2rem, 8vw, 3.2rem) 0 clamp(1.2rem, 4vw, 1.9rem);
+    }
+
+    .cucina-page .navbar .nav {
+        justify-content: flex-start;
+        gap: 0.45rem 0.9rem;
+        padding: 0.55rem 0.6rem;
+    }
+
+    .cucina-page .main {
+        gap: 1.45rem;
+        padding-top: 1rem;
+    }
+
+    .cucina-page .main .menu-content .title {
+        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .cucina-page .main .menu-content .objects {
+        margin-top: 0.6rem;
+    }
+
+    .cucina-page .main .menu-content .objects .item {
+        padding-block: 1.05rem;
+        gap: 0.5rem;
+    }
+
+    .cucina-page .main .menu-content .objects .item .header-item {
+        gap: 0.55rem;
+    }
+
+    .cucina-page .cucina-highlights a {
+        font-size: 0.66rem;
+    }
+}
