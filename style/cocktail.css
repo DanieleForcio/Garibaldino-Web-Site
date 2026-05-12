@@ -472,3 +472,92 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 900px) {
   .cocktail-page .altrove-grid { grid-template-columns: 1fr; }
 }
+
+/* Altrove correction: vertical narrative tiki list */
+.cocktail-page .altrove-section {
+  padding: clamp(1.5rem, 3.2vw, 2.3rem);
+  border: 1px solid rgba(214, 157, 95, 0.38);
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255, 171, 88, 0.2), transparent 38%),
+    linear-gradient(170deg, rgba(52, 30, 20, 0.94), rgba(22, 14, 11, 0.96));
+}
+
+.cocktail-page .altrove-section::before {
+  inset: 14px;
+  border-style: solid;
+  border-color: rgba(255, 211, 154, 0.12);
+}
+
+.cocktail-page .altrove-title-panel {
+  border: 0;
+  border-left: 2px solid rgba(255, 193, 122, 0.55);
+  background: linear-gradient(90deg, rgba(94, 56, 29, 0.45), rgba(94, 56, 29, 0));
+  padding: 0.7rem 0.9rem;
+}
+
+.cocktail-page .altrove-title-panel .item-title { font-size: clamp(2rem, 5.5vw, 3.2rem); }
+
+.cocktail-page .altrove-list {
+  display: block;
+  border-top: 1px solid rgba(255, 197, 128, 0.24);
+  margin-top: 0.9rem;
+}
+
+.cocktail-page .altrove-drink {
+  position: relative;
+  padding: 1rem 0.2rem 0.95rem;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 207, 147, 0.3);
+  background: transparent;
+  box-shadow: none;
+}
+
+.cocktail-page .altrove-drink .header-item {
+  align-items: flex-start;
+  padding-right: 3.1rem;
+}
+
+.cocktail-page .altrove-drink .specific-item {
+  position: absolute;
+  top: 1.02rem;
+  right: 0.2rem;
+  min-width: auto;
+  color: #ffd08d;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+}
+
+.cocktail-page .altrove-drink .title-item {
+  color: #fff0d4;
+  font-size: clamp(1.02rem, 2.1vw, 1.18rem);
+}
+
+.cocktail-page .altrove-story { color: #f2dcc0; margin-top: 0.32rem; }
+.cocktail-page .altrove-ingredients {
+  color: #e6c08b;
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
+}
+.cocktail-page .altrove-finish {
+  margin-top: 0.2rem;
+  color: #f7e9d1;
+  font-size: 0.81rem;
+  text-transform: none;
+  font-style: italic;
+}
+
+.cocktail-page .altrove-drink.item--mocktail {
+  background: linear-gradient(90deg, rgba(131, 175, 98, 0.14), transparent 55%);
+}
+
+.cocktail-page .altrove-drink .mocktail-badge {
+  border: 0;
+  border-bottom: 1px solid rgba(196, 235, 168, 0.8);
+  padding: 0 0.05rem;
+  background: transparent;
+  color: #d6f5bd;
+  letter-spacing: 0.13em;
+}
+
+.cocktail-page .altrove-card-topline,
+.cocktail-page .altrove-style-note { display: none; }
